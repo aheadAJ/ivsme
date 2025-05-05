@@ -1,0 +1,72 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.category-hero {
+  position: relative;
+  background-color: black;
+  background-image: url("/assets/images/hero-chin-up-711x400.jpg"),
+    url("/assets/images/hero-chin-up-148x83.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.category-hero--overlay {
+  position: absolute;
+  //   background-color: rgba(0, 0, 0, 0.2);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 20%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.category-hero--text--wrapper {
+  color: $light-clr;
+  // position: absolute;
+  // top: 45%;
+  // left: 50%;
+  // transform: translate(-50%, 0%);
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  // height: 500px;
+}
+.category-hero--title {
+  color: rgba($light-clr, 0.85);
+  span {
+    text-transform: uppercase;
+    color: rgba($accent-clr-dark, 0.9);
+  }
+}
+.h1--span {
+  font-size: 40px;
+  display: block;
+}
+
+.blogs--section {
+  width: 95%;
+  margin: auto;
+}
+.category-hero--scroll-down-arrow {
+  font-size: 36px;
+  font-weight: 600;
+  padding-top: 0px;
+  animation: bounce 3s infinite;
+  color: $accent-clr-dark;
+}
+@media screen and (min-width: 769px) {
+  .category-hero--title {
+    font-size: 2.5rem !important;
+    span {
+      font-size: 3rem !important;
+    }
+  }
+  .blogs--section {
+    width: 90%;
+  }
+}

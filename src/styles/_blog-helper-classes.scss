@@ -1,0 +1,23 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.mlr-95 {
+  width: 95%;
+  margin: auto;
+}
+
+@media screen and (min-width: 769px) {
+  .mlr-95 {
+    width: 50%;
+    margin: 0 30% 0 20%;
+  }
+  .mr-70 {
+    width: 70%;
+    margin: 0 30% 0 0;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}

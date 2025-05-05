@@ -1,0 +1,110 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.img--wrapper {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-style: italic;
+  font-size: $small;
+  min-width: 300px;
+  min-height: 169px;
+  img {
+    width: 100%;
+    height: auto;
+    line-height: 1;
+    vertical-align: middle;
+    transition: all 0.5s ease;
+    &:hover {
+      transform: scale(110%);
+      filter: grayscale(100%);
+    }
+  }
+}
+.blogs--category--h2 {
+  transition: all 1s ease;
+  &:hover {
+    color: rgba($accent-clr-dark, 1);
+  }
+}
+.grey-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Grey shadow */
+}
+.transparent--btn {
+  display: inline-block;
+  background-color: rgba($dark-clr, 0);
+  border: 1px solid rgba($light-clr, 0.9);
+  border-radius: 4px;
+  padding: 8px 30px;
+  text-transform: uppercase;
+  font-size: $normal;
+  font-weight: 600;
+  color: $light-clr;
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Grey shadow */
+  cursor: pointer;
+  @include transition-ease;
+}
+.transparent--btn:hover {
+  background-color: rgba($light-clr, 0.9);
+  color: $accent-clr-dark;
+  // border: 1px solid rgba($light-clr, 0);
+
+  // text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
+}
+.para--cta {
+  text-decoration: underline 2px solid rgba($accent-clr-dark, 1);
+  text-underline-offset: 1px;
+  transition: all 0.5s ease-in-out;
+  &:hover {
+    text-decoration: underline 2px solid rgba($dark-clr, 1);
+    color: $accent-clr-dark;
+  }
+}
+.section--title {
+  font-size: $large;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: rgba($dark-clr, 0.95);
+  border-bottom: 2px solid rgba($dark-clr, 0.8);
+  margin-bottom: 11px;
+  padding-bottom: 0px;
+}
+.section--container {
+  h2 {
+    padding: 16px 0 0.6px 0;
+  }
+}
+.categories--btn--div {
+  padding: 4px 0 40px 0;
+}
+.categories--btn {
+  display: inline-block;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid $dark-clr;
+  padding: 8px 20px;
+  transition: 0.5s ease;
+  background-color: $dark-clr;
+  color: $light-clr;
+  margin: 0px 10px 8px 0;
+  &:hover {
+    background-color: $light-clr;
+    color: $dark-clr;
+  }
+}
+.article--para--border-left {
+  padding: 0px 0px 0px 6px;
+  border-left: 8px solid rgba(255, 0, 0, 0.7);
+  margin: 4px 0 10px 0;
+}
+@media screen and (min-width: 769px) {
+  .first-section {
+    width: 50%;
+    margin: 0 45% 0 5%;
+  }
+  .section--container {
+    p {
+      font-size: $large;
+    }
+  }
+}

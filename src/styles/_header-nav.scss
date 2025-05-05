@@ -1,0 +1,102 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.active--nav-link {
+  text-decoration: underline;
+  text-decoration-color: $accent-clr-dark;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+  pointer-events: none;
+  border-radius: 0 !important;
+}
+
+#react-header {
+  min-height: 170px;
+}
+.header--nav {
+  border-top: 20px solid rgba($mid-clr, 1);
+}
+.header--container {
+  text-align: center;
+}
+.header--logo {
+  padding: 16px 0;
+  min-height: 80px;
+  border-bottom: 2px solid rgba($mid-clr, 1);
+}
+.logo--text--a {
+  font-family: "BlackOps-One", Impact, "Segoe UI", sans-serif;
+  font-size: 38px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 2px;
+  pointer-events: none;
+}
+.logo--sub-headline {
+  line-height: 1;
+  margin-top: 0px;
+  font-size: 13px;
+  color: rgba($mid-clr, 1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  padding-bottom: 0;
+}
+.nav--container {
+  padding: 14px 0;
+  min-height: 50px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+.nav-links--a {
+  border-bottom: 2px solid $light-clr;
+  padding-bottom: 2px;
+  @include transition-ease;
+  &:hover {
+    border-bottom: 2px solid rgba($accent-clr-dark, 1);
+    padding-bottom: 2px;
+    color: rgba($dark-clr, 0.9) !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  #react-header {
+    min-height: 180px;
+  }
+  .header--logo {
+    padding: 24px 0 !important;
+    min-height: 100px !important;
+  }
+  .logo--text--a {
+    font-size: 42px !important;
+  }
+  .logo--sub-headline {
+    letter-spacing: 2.4px !important;
+  }
+  .nav--container {
+    padding: 16px 0 !important;
+    min-height: 40px !important;
+  }
+  .nav-links {
+    gap: 2px !important;
+  }
+  .nav-links--a {
+    border-bottom: 2px solid rgba($light-clr, 0);
+    background-color: $light-clr;
+    padding: 4px 16px 2px 16px;
+    margin: 0 1px;
+    @include transition-ease;
+    &:hover {
+      border-bottom: 2px solid rgba($accent-clr-dark, 0);
+      background-color: $accent-clr-dark;
+      color: $light-clr !important;
+      padding: 4px 16px 2px 16px;
+      border-radius: 4px;
+    }
+  }
+}

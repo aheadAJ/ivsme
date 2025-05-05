@@ -1,0 +1,16 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+@media screen and (min-width: 768px) {
+  .about-us--section {
+    width: 60% !important;
+    margin: 0rem 25% 0 15% !important;
+    p {
+      font-size: $x-large;
+    }
+  }
+  .about-us--btns {
+    width: 60%;
+    margin: 0 25% 0 15%;
+  }
+}

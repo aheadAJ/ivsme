@@ -1,0 +1,14 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.category-hero--text--wrapper {
+  text-align: center;
+  padding: 110px 2.5% 40px 2.5%;
+}
+
+@media screen and (min-width: 769px) {
+  .blog-section--main-page {
+    width: 65%;
+    margin: 0 30% 0 5%;
+  }
+}

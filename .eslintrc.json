@@ -1,0 +1,8 @@
+{
+  "extends": ["next/core-web-vitals", "prettier"],
+  "plugins": ["react"],
+  "rules": {
+    "no-console": "off",
+    "react/no-unescaped-entities": "off"
+  }
+}

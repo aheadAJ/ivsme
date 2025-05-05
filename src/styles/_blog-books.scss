@@ -1,0 +1,35 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.book {
+  // background-color: rgba($dark-clr, 0.05);
+  border-top: 2px solid rgba($dark-clr, 0.8);
+  // border-bottom: 2px solid rgba($dark-clr, 0.8);
+  padding: 16px 0;
+  h3 {
+    font-size: $x-large;
+    padding-bottom: 10px;
+  }
+
+  .squat-every-day--desc {
+    padding-top: 12px;
+  }
+  .squat-every-day--desc p:last-child {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .book h3 {
+    padding-bottom: 0px;
+  }
+  .book--container > .img--wrapper {
+    margin-top: 12px;
+  }
+  .squat-every-day--desc {
+    padding-top: 0;
+    p {
+      font-size: $large;
+    }
+  }
+}
