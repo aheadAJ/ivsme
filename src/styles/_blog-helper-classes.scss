@@ -1,11 +1,6 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.mlr-95 {
-  width: 95%;
-  margin: auto;
-}
-
 @media screen and (min-width: 769px) {
   .mlr-95 {
     width: 50%;

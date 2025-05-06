@@ -1,5 +1,5 @@
-@use "variables" as *;
-@use "mixins" as *;
+@use 'variables' as *;
+@use 'mixins' as *;
 
 .img--wrapper {
   overflow: hidden;
@@ -21,6 +21,11 @@
     }
   }
 }
+.blog-section--main-page {
+  width: 95%;
+  margin: auto;
+}
+
 .blogs--category--h2 {
   transition: all 1s ease;
   &:hover {

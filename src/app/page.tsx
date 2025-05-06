@@ -96,8 +96,8 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div id="main-section" className="main--section">
-          <section id="blog-section" className="blog-section--main-page ptb-5">
+        <div id="main-section" className="main--section ">
+          <section id="blog-section" className="blog-section--main-page  ptb-5">
             <Link href="/blogs">
               <p className="section--title" id="blogs">
                 Latest Blogs{' '}
