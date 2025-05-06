@@ -10,9 +10,22 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Disable image optimization for static export
   },
   eslint: {
-    // Warning: This allows production builds to successfully complete even if
-    // your project has ESLint errors.
     ignoreDuringBuilds: true,
+  },
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'ivsme.vercel.app',
+          },
+        ],
+        destination: 'https://www.ivsme.in/:path*',
+        permanent: true,
+      },
+    ];
   },
 };
 

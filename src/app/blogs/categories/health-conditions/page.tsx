@@ -125,10 +125,10 @@ export default function HealthConditionsPage() {
                     Start your recovery journey today!
                   </Link>
                 </p>
-                <Link className="categories--btn" href="//blogs">
+                <Link className="categories--btn" href="/blogs">
                   Latest Blogs
                 </Link>
-                <Link className="categories--btn" href="//blogs/categories">
+                <Link className="categories--btn" href="/blogs/categories">
                   Blog Categories
                 </Link>
               </div>

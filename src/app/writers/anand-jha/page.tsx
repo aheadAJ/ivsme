@@ -92,7 +92,7 @@ export default function AnandJhaPage() {
             </div>
           </div>
         </div>
-        <section className="about-us--section pt-2">
+        <section className="about-us--section mlr-95 pt-2">
           <p>
             <strong>Anand Jha</strong> is a fitness enthusiast and a struggling
             model with nearly 25 years of writing experience. His work spans TV
@@ -136,7 +136,7 @@ export default function AnandJhaPage() {
             and travel.
           </p>
         </section>
-        <div className="about-us--btns categories--btn--div mlr-95">
+        <div className="about-us--btns categories--btn--div">
           <Link className="categories--btn" href="../../blogs">
             Latest Blogs
           </Link>

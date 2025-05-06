@@ -1,14 +1,14 @@
 // components/Footer.tsx
-"use client";
+'use client';
 
-import Image from "next/image";
+import Image from 'next/image';
 
 export default function Footer() {
   return (
     <footer>
       <section className="icons--social-media ptb-4">
         <a
-          href="https://facebook.com/com.blckz"
+          href="https:/facebook.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export default function Footer() {
           />
         </a>
         <a
-          href="https://instagram.com/com.blckz"
+          href="https:/instagram.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -38,7 +38,7 @@ export default function Footer() {
           />
         </a>
         <a
-          href="https://twitter.com/BLcKZ_com"
+          // href="https:/twitter.com/BLcKZ_com"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -56,7 +56,7 @@ export default function Footer() {
       <section className="footer--copyright ptb-2">
         <p>
           © 2025 Copyright: <a href="#top">i Vs. Me</a> | Fast loading website
-          by:{" "}
+          by:{' '}
           <a
             href="https://www.blckz.in"
             target="_blank"

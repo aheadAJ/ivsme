@@ -1,6 +1,11 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
+.about-us--btns {
+  width: 95%;
+  margin: 0 2.5% 0 2.5%;
+}
+
 @media screen and (min-width: 768px) {
   .about-us--section {
     width: 60% !important;
