@@ -8,7 +8,7 @@ export default function Footer() {
     <footer>
       <section className="icons--social-media ptb-4">
         <a
-          href="https:/facebook.com/ivsme.in"
+          href="https://facebook.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export default function Footer() {
           />
         </a>
         <a
-          href="https:/instagram.com/ivsme.in"
+          href="https://instagram.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
