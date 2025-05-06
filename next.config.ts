@@ -12,21 +12,6 @@ const nextConfig: NextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  async redirects() {
-    return [
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'ivsme.vercel.app',
-          },
-        ],
-        destination: 'https://www.ivsme.in/:path*',
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;

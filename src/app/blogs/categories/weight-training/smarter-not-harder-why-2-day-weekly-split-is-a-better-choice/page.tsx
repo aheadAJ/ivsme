@@ -13,32 +13,20 @@ export const metadata = {
     'wellness journey',
     'inspiring fitness stories',
   ],
-  metadataBase: new URL('https://www.ivsme.in'),
   openGraph: {
     title:
       'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
     description:
       "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
     url: 'https://www.ivsme.in',
-    siteName: 'i Vs. Me',
     images: [
       {
-        url: 'https://www.ivsme.in/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
         width: 1200,
         height: 630,
         alt: 'i Vs. Me Logo',
       },
     ],
-    locale: 'en_US',
-    type: 'website',
-  },
-  authors: [{ name: 'Anand Jha' }],
-  creator: 'Anand Jha',
-  publisher: 'i Vs. Me',
-  themeColor: '#ffffff',
-  robots: {
-    index: true,
-    follow: true,
   },
   alternates: {
     canonical: 'https://www.ivsme.in',

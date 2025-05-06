@@ -9,28 +9,29 @@ import Footer from './components/Footer'; // if components is one level up
 import GoogleAnalytics from './components/GoogleAnalytics'; // adjust path if needed
 
 // Global defaults for the entire site
+
 export const metadata = {
-  metadataBase: new URL('https://www.ivsme.in'),
-  title: {
-    default: 'i Vs. Me | Challenge Your Limits 🏋️ Transform Your Life',
-    template: '%s | i Vs. Me',
-  },
-  description: 'Challenge Your Limits. Transform Your Life.',
+  title:
+    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+  description:
+    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
   keywords: [
     'fitness inspiration',
-    'wellness transformation',
-    'mental strength',
-    'health journey',
+    'health transformation',
+    'wellness journey',
+    'inspiring fitness stories',
   ],
+  metadataBase: new URL('https://www.ivsme.in'),
   openGraph: {
-    title: 'i Vs. Me – Challenge Your Limits 🏋️ Transform Your Life',
+    title:
+      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
     description:
-      'Explore fitness stories, personal transformation journeys, and tools to unlock your potential.',
+      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
     url: 'https://www.ivsme.in',
     siteName: 'i Vs. Me',
     images: [
       {
-        url: '/assets/icons/ivsme-logo-1200x630.jpg', // uses /public path
+        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
         width: 1200,
         height: 630,
         alt: 'i Vs. Me Logo',
@@ -39,17 +40,17 @@ export const metadata = {
     locale: 'en_US',
     type: 'website',
   },
-  themeColor: '#ffffff',
-  robots: {
-    index: true,
-    follow: true,
-  },
-  alternates: {
-    canonical: 'https://www.ivsme.in',
-  },
   authors: [{ name: 'Anand Jha' }],
   creator: 'Anand Jha',
   publisher: 'i Vs. Me',
+  alternates: {
+    canonical: 'https://www.ivsme.in',
+  },
+};
+
+// Move `themeColor` here:
+export const viewport = {
+  themeColor: '#ffffff',
 };
 
 export default function RootLayout({
