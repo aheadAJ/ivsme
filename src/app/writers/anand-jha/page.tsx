@@ -94,7 +94,7 @@ export default function AnandJhaPage() {
         </div>
         <section className="about-us--section pt-2">
           <p>
-            <strong>Anand Jha</strong>, 53, is a fitness enthusiast and emerging
+            <strong>Anand Jha</strong> is a fitness enthusiast and a struggling
             model with nearly 25 years of writing experience. His work spans TV
             documentaries, advertisements, and features in prominent Indian
             publications, including <em>The Times of India</em>,
