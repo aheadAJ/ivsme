@@ -92,11 +92,11 @@ export default function Error404Page() {
         <section className="about-us--section" style={{ paddingTop: 50 }}>
           {' '}
         </section>
-        <section className="thanks--section mlr-95">
+        <section className="thanks--section">
           <h3 style={{ lineHeight: '1.4' }}>
             Click on the buttons below to keep your workout going strong!
           </h3>
-          <div className="thanks--btns categories--btn--div">
+          <div className="categories--btn--div thanks--btns">
             <Link className="categories--btn" href="../blogs">
               Latest Blogs
             </Link>

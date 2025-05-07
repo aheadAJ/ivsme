@@ -75,10 +75,7 @@ export default function SquatEveryDayBookPage() {
           <div className="header--highlight">
             <p>
               In "Squat Every Day: Learning Life's Lessons,"{' '}
-              <Link
-                href="../../../pages/writers/anand-jha"
-                className="para--cta"
-              >
+              <Link href="../../../writers/anand-jha" className="para--cta">
                 {' '}
                 Anand Jha
               </Link>{' '}

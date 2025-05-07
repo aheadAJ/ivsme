@@ -8,7 +8,7 @@ export default function Footer() {
     <footer>
       <section className="icons--social-media ptb-4">
         <a
-          href="https://facebook.com/ivsme.in"
+          href="https://www.facebook.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -23,7 +23,7 @@ export default function Footer() {
           />
         </a>
         <a
-          href="https://instagram.com/ivsme.in"
+          href="https://www.instagram.com/ivsme.in"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
@@ -38,15 +38,15 @@ export default function Footer() {
           />
         </a>
         <a
-          // href="https:/twitter.com/BLcKZ_com"
+          href="https://www.youtube.com/@ivsmein"
           className="footer-icons"
           target="_blank"
           rel="noopener noreferrer"
         >
           <Image
             className="icons"
-            src="/assets/icons/square-x-twitter.svg"
-            alt="Link to BLcKZ X, formerly Twitter, Page"
+            src="/assets/icons/square-youtube.svg"
+            alt="Link to BLcKZ YouTube Channel"
             width={32}
             height={32}
             loading="lazy"
