@@ -153,13 +153,13 @@ export default function TwoDaySplit() {
                 the next session.
               </p>
               <p>
-                Recent research, such as a study published on
+                Recent research, such as a study published on{' '}
                 <Link
                   href="https://sportrxiv.org/index.php/server/preprint/view/460/967"
                   className="para--cta"
                 >
                   Sportrxiv
-                </Link>
+                </Link>{' '}
                 , that went into the effectiveness of different training
                 frequencies, reported that muscle recovery isn't always as black
                 and white as once thought. It often depends on individual
@@ -181,22 +181,22 @@ export default function TwoDaySplit() {
                 stimulation.
               </p>
               <p>
-                For example, research from
+                For example, research from{' '}
                 <Link
                   href="https://pubmed.ncbi.nlm.nih.gov/19661830/"
                   className="para--cta"
                 >
                   PubMed
-                </Link>
+                </Link>{' '}
                 confirms that training a muscle group multiple times per week
                 leads to optimal protein synthesis and muscle hypertrophy over
-                time. Additionally, a review on
+                time. Additionally, a review on{' '}
                 <Link
                   href="https://link.springer.com/article/10.1007/s40279-019-01236-0?fbclid=IwAR06LGS-yhLy3cTZt9yKAVVZ-36vqL9ad_GDVWi-Ig-dGpcDmsWTGRBdBg4"
                   className="para--cta"
                 >
                   Springer
-                </Link>
+                </Link>{' '}
                 highlights how frequency and volume significantly impact
                 long-term muscle growth.
               </p>
@@ -241,13 +241,13 @@ export default function TwoDaySplit() {
                 overlooked.
               </p>
               <p>
-                A
+                A{' '}
                 <Link
                   className="para--cta"
                   href="https://www.reddit.com/r/bodyweightfitness/comments/onfqge/minimum_and_the_best_number_of_sets_for_muscle/?rdt=65256"
                 >
                   Reddit discussion
-                </Link>
+                </Link>{' '}
                 on training frequency also offers anecdotal evidence and advice
                 from everyday practitioners, highlighting how incorporating
                 proper rest and recovery periods can impact performance and
@@ -286,13 +286,13 @@ export default function TwoDaySplit() {
                 Meta-Analysis Insights
               </h2>
               <p>
-                Meta-analyses, for example, by the
+                Meta-analyses, for example, by the{' '}
                 <Link
                   href="https://pubmed.ncbi.nlm.nih.gov/19661830/"
                   className="para--cta"
                 >
                   PubMed
-                </Link>
+                </Link>{' '}
                 show that twice-weekly training provides frequent muscle protein
                 synthesis stimulation, leading to optimal muscle growth without
                 overloading the system. It's a balance between volume and
