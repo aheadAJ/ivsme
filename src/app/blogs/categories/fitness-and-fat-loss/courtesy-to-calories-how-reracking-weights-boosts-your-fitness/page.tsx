@@ -253,7 +253,7 @@ export default function ReRackingWeightBlog() {
               <p className="article--para--border-left">
                 What's one small habit you can commit to this week to improve
                 your fitness routine? Share your thoughts in the{' '}
-                <Link href="../../../pages/contact-us" className="para--cta">
+                <Link href="../../../contact-us" className="para--cta">
                   contact us page
                 </Link>{' '}
                 !
