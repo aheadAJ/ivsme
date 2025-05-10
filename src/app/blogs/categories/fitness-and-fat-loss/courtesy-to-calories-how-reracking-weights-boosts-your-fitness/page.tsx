@@ -252,10 +252,10 @@ export default function ReRackingWeightBlog() {
               <h2 className="article--para--border-left">Challenge for You</h2>
               <p className="article--para--border-left">
                 What's one small habit you can commit to this week to improve
-                your fitness routine? Share your thoughts in the
+                your fitness routine? Share your thoughts in the{' '}
                 <Link href="../../../pages/contact-us" className="para--cta">
                   contact us page
-                </Link>
+                </Link>{' '}
                 !
               </p>
             </div>
