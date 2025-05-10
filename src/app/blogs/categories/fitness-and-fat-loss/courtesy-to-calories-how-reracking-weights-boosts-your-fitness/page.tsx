@@ -128,7 +128,7 @@ export default function ReRackingWeightBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mr-70">
+              <div className="img--wrapper mr-70">
                 <Image
                   src="/assets/images/dumbbell-hand-picking-587x330.webp"
                   alt="A hand picking up dumbbell from floor to rerack weight"

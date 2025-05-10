@@ -135,7 +135,7 @@ export default function MetabolismBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mr-70">
+              <div className="img--wrapper mr-70">
                 <Image
                   src="/assets/images/man-metabolism-587x330.webp"
                   alt="AI photo related to metabolism"
@@ -185,7 +185,7 @@ export default function MetabolismBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mr-70">
+              <div className="img--wrapper  mr-70">
                 <Image
                   src="/assets/images/aj-gym-winking-triceps-900x554.webp"
                   alt="Photo of a 50 plus man after weight training"

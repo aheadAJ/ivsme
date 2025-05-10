@@ -129,7 +129,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
             </div>
             {/* <div class="blog--ads google-blog-ad" ></div> */}
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mlr-95">
+              <div className="img--wrapper  mlr-95">
                 <Image
                   src="/assets/images/man-dumbbell-curl-587x330.webp"
                   alt="AI photo of a man doing dumbbell curls"
@@ -194,7 +194,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
               </div>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mlr-95">
+              <div className="img--wrapper  mlr-95">
                 <Image
                   src="/assets/images/dumbbell-300x169.webp"
                   alt="Dumbbells neatly arranged on dumbbell rack"

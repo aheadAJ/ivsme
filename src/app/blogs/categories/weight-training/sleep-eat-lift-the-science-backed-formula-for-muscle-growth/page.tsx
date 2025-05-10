@@ -134,7 +134,7 @@ export default function EatSleepLiftBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mr-70">
+              <div className="img--wrapper mr-70">
                 <Image
                   src="/assets/images/sleep-eat-train-587x330.webp"
                   alt="AI photo of a man training with weights, healthy food and sleeping"
@@ -183,7 +183,7 @@ export default function EatSleepLiftBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper blog--photo mlr-95">
+              <div className="img--wrapper  mlr-95">
                 <Image
                   src="/assets/images/sleep-eat-train-587x386.webp"
                   alt="AI photo of a man training with weights, healthy food and sleeping"
