@@ -127,14 +127,16 @@ export default function ReRackingWeightBlog() {
                 and legs.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mr-70">
-              <Image
-                src="/assets/images/dumbbell-hand-picking-587x330.webp"
-                alt="A hand picking up dumbbell from floor to rerack weight"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mr-70">
+                <Image
+                  src="/assets/images/dumbbell-hand-picking-587x330.webp"
+                  alt="A hand picking up dumbbell from floor to rerack weight"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2>Build Grip Strength and Forearm Endurance</h2>

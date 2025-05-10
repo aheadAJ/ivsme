@@ -126,14 +126,16 @@ export default function TwoDaySplit() {
                 routines that may provide better results for many gym-goers.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mlr-95">
-              <Image
-                src="/assets/images/ai-img-train-smart-587x330.webp"
-                alt="AI photo of a man squatting the gym while his trainer is running towards him"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper mlr-95">
+                <Image
+                  src="/assets/images/ai-img-train-smart-587x330.webp"
+                  alt="AI photo of a man squatting the gym while his trainer is running towards him"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2 className="article--para--border-left">
@@ -308,7 +310,7 @@ export default function TwoDaySplit() {
                 while keeping your schedule flexible, here's an example of how
                 you can structure your week:
               </p>
-              <ul className="article--para--border-left">
+              <ul className="article--para--border-left li-highlights">
                 <li>Day 1: Chest, Triceps</li>
                 <li>Day 2: Back, Biceps</li>
                 <li>Day 3: Legs, Shoulders</li>
@@ -319,11 +321,12 @@ export default function TwoDaySplit() {
                 This setup allows you to train each muscle group twice a week
                 without overloading your schedule. Better still, you can factor
                 in rest on any day that suits you. Personally, for a person who
-                is “regularly irregular” I can't even think of follow an n-days
-                of rigid weight training schedules, this protocol especially
-                suits me. During winters when the morning chill makes getting
-                out of bed difficult, or on evenings when spending time with my
-                wife and daughters takes priority… well you get my point.
+                is “regularly irregular” I can't even think of following n
+                number of days of rigid weight training schedules, this protocol
+                especially suits me. During winters when the morning chill makes
+                getting out of bed difficult, or on evenings when spending time
+                with my wife and daughters takes priority… well you get my
+                point.
               </p>
               <p>
                 By aiming for 9—12 sets per muscle group (2-3 sets of 10-20 reps
@@ -340,7 +343,7 @@ export default function TwoDaySplit() {
             <Link href="../../../blogs">Latest Blogs</Link>
             <Link href="../../../blogs/categories">Blog Categories</Link>
           </div>
-          <div className="blog--right-sidebar" />
+          <div className="blog--right-sidebar"></div>
         </div>
         <div className="blog--right-sidebar"></div>
         <BookSED />

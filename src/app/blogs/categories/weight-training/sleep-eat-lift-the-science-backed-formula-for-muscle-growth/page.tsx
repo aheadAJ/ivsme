@@ -133,14 +133,16 @@ export default function EatSleepLiftBlog() {
                 consistent sleep schedule to maximize recovery.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mr-70">
-              <Image
-                src="/assets/images/sleep-eat-train-587x330.webp"
-                alt="AI photo of a man training with weights, healthy food and sleeping"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mr-70">
+                <Image
+                  src="/assets/images/sleep-eat-train-587x330.webp"
+                  alt="AI photo of a man training with weights, healthy food and sleeping"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2 className="article--para--border-left">
@@ -180,14 +182,16 @@ export default function EatSleepLiftBlog() {
                 to that stimulus effectively.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mlr-95">
-              <Image
-                src="/assets/images/sleep-eat-train-587x386.webp"
-                alt="AI photo of a man training with weights, healthy food and sleeping"
-                width={587}
-                height={386}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mlr-95">
+                <Image
+                  src="/assets/images/sleep-eat-train-587x386.webp"
+                  alt="AI photo of a man training with weights, healthy food and sleeping"
+                  width={587}
+                  height={386}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h3>Assessing Your Progress</h3>
@@ -232,7 +236,7 @@ export default function EatSleepLiftBlog() {
             <Link href="../../../blogs">Latest Blogs</Link>
             <Link href="../../../blogs/categories">Blog Categories</Link>
           </div>
-          <div className="blog--right-sidebar" />
+          <div className="blog--right-sidebar"></div>
         </div>
         <div className="blog--right-sidebar"></div>
         <BookSED />

@@ -20,6 +20,11 @@
     }
   }
 }
+
+.blog--photo {
+  padding-bottom: 16px;
+}
+
 .article--para--highlight {
   background-color: rgba($dark-clr, 0.1);
   padding: 18px 2.5% 0px 2.5%;
@@ -75,9 +80,7 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0);
   }
 }
-.blog--photo {
-  margin-bottom: 18px;
-}
+
 .para--cta {
   text-decoration: underline 2px solid rgba($accent-clr-dark, 1);
   text-underline-offset: 1px;
@@ -104,6 +107,10 @@
       color: $dark-clr;
     }
   }
+}
+.li-highlights li {
+  // font-size: $normal;
+  line-height: 1.6;
 }
 // .article--btn {
 // }

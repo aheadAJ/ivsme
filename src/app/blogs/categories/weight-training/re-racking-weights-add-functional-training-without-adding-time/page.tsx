@@ -125,14 +125,16 @@ export default function ReRackingWeightsBlog() {
               </p>
             </div>
             {/* <div class="blog--ads google-blog-ad" ></div> */}
-            <div className="img--wrapper blog--photo mlr-95">
-              <Image
-                src="/assets/images/woman-dumbbells-587x330.webp"
-                alt="AI photo of a woma walking with dumbbells"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mlr-95">
+                <Image
+                  src="/assets/images/woman-dumbbells-587x330.webp"
+                  alt="AI photo of a woma walking with dumbbells"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <p>
@@ -153,14 +155,16 @@ export default function ReRackingWeightsBlog() {
               </p>
               <p>The more I thought, the more possibilities it opened up.</p>
             </div>
-            <div className="img--wrapper blog--photo mlr-95">
-              <Image
-                src="/assets/images/dumbbell-300x169.webp"
-                alt="AI photo of dumbbells neatly arranged on dumbbell rack"
-                width={300}
-                height={169}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mlr-95">
+                <Image
+                  src="/assets/images/dumbbell-300x169.webp"
+                  alt="AI photo of dumbbells neatly arranged on dumbbell rack"
+                  width={300}
+                  height={169}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para article--para--highlight">
               <h2>Why Re-Racking Weights is Good for You</h2>

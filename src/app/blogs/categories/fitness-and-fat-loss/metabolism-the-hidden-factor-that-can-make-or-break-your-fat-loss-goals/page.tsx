@@ -134,14 +134,16 @@ export default function MetabolismBlog() {
                 fewer calories, making it harder to shed those last few pounds.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mr-70">
-              <Image
-                src="/assets/images/man-metabolism-587x330.webp"
-                alt="AI photo related to metabolism"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mr-70">
+                <Image
+                  src="/assets/images/man-metabolism-587x330.webp"
+                  alt="AI photo related to metabolism"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2>How to Optimize Your Metabolism</h2>
@@ -182,14 +184,16 @@ export default function MetabolismBlog() {
                 not perfect, but I'm keeping my metabolism on its toes!
               </p>
             </div>
-            <div className="img--wrapper blog--photo mr-70">
-              <Image
-                src="/assets/images/aj-gym-winking-triceps-900x554.webp"
-                alt="Photo of a 50 plus man after weight training"
-                width={900}
-                height={554}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mr-70">
+                <Image
+                  src="/assets/images/aj-gym-winking-triceps-900x554.webp"
+                  alt="Photo of a 50 plus man after weight training"
+                  width={900}
+                  height={554}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2>The Big Picture: Sustainable Weight Loss</h2>
@@ -255,7 +259,7 @@ export default function MetabolismBlog() {
             <Link href="../../../blogs">Latest Blogs</Link>
             <Link href="../../../blogs/categories">Blog Categories</Link>
           </div>
-          <div className="blog--right-sidebar" />
+          <div className="blog--right-sidebar"></div>
         </div>
         <div className="blog--right-sidebar"></div>
         <BookSED />

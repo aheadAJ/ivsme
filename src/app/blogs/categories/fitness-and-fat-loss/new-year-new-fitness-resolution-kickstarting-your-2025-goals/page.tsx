@@ -137,14 +137,16 @@ export default function NewYear2025FitnessGoals() {
                 perfection but creating a habit of showing up.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mr-70">
-              <Image
-                src="/assets/images/man-barbell-sun-587x330.webp"
-                alt="AI photo of a man holding a barbell looking at the sun"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mr-70">
+                <Image
+                  src="/assets/images/man-barbell-sun-587x330.webp"
+                  alt="AI photo of a man holding a barbell looking at the sun"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2 className="article--para--border-left">
@@ -205,14 +207,16 @@ export default function NewYear2025FitnessGoals() {
                 as measurable signs of your progress.
               </p>
             </div>
-            <div className="img--wrapper blog--photo mlr-95">
-              <Image
-                src="/assets/images/woman-running-587x330.webp"
-                alt="AI photo of a woman running"
-                width={587}
-                height={330}
-                loading="lazy"
-              />
+            <div className="blog--photo">
+              <div className="img--wrapper blog--photo mlr-95">
+                <Image
+                  src="/assets/images/woman-running-587x330.webp"
+                  alt="AI photo of a woman running"
+                  width={587}
+                  height={330}
+                  loading="lazy"
+                />
+              </div>
             </div>
             <div className="blog--para mlr-95">
               <h2 className="article--para--border-left">
