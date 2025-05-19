@@ -15,16 +15,17 @@ interface BlogData {
   date?: string;
 }
 
-interface Params {
+// ✅ Correct type structure for Next.js App Router
+type PageProps = {
   params: {
     category: string;
     slug: string;
   };
-}
+};
 
 const blogsDirectory = path.join(process.cwd(), 'src/app/blogs');
 
-export default async function BlogPage({ params }: Params) {
+export default async function BlogPage({ params }: PageProps) {
   const { category, slug } = params;
 
   const filePath = path.join(blogsDirectory, category, slug, 'metadata.json');
@@ -53,13 +54,20 @@ export default async function BlogPage({ params }: Params) {
   );
 }
 
-// Adding this to generate all static paths for the blog pages
-export async function generateStaticParams() {
+// ✅ IMPORTANT: Do NOT nest params inside `params: {}` in App Router
+export async function generateStaticParams(): Promise<
+  { category: string; slug: string }[]
+> {
   const folderNames = fs.readdirSync(blogsDirectory);
 
   const allParams = folderNames.flatMap((category) => {
     const categoryPath = path.join(blogsDirectory, category);
-    const slugs = fs.readdirSync(categoryPath);
+    if (!fs.statSync(categoryPath).isDirectory()) return [];
+
+    const slugs = fs.readdirSync(categoryPath).filter((slugDir) => {
+      const metaPath = path.join(categoryPath, slugDir, 'metadata.json');
+      return fs.existsSync(metaPath);
+    });
 
     return slugs.map((slug) => ({
       category,
@@ -67,7 +75,5 @@ export async function generateStaticParams() {
     }));
   });
 
-  return allParams.map(({ category, slug }) => ({
-    params: { category, slug },
-  }));
+  return allParams;
 }
