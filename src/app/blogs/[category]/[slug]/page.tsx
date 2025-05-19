@@ -15,17 +15,13 @@ interface BlogData {
   date?: string;
 }
 
-// ✅ Correct type structure for Next.js App Router
-type PageProps = {
-  params: {
-    category: string;
-    slug: string;
-  };
-};
-
 const blogsDirectory = path.join(process.cwd(), 'src/app/blogs');
 
-export default async function BlogPage({ params }: PageProps) {
+export default async function BlogPage({
+  params,
+}: {
+  params: { category: string; slug: string };
+}) {
   const { category, slug } = params;
 
   const filePath = path.join(blogsDirectory, category, slug, 'metadata.json');
