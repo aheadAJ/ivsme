@@ -11,18 +11,14 @@ export default function BlogSection() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/blogs.json')
+    fetch('/api/blogs') // 🔄 new API route
       .then((res) => res.json())
       .then((data: BlogData[]) => {
-        // Sort blogs by date descending (latest first)
-        const sortedBlogs = data.sort((a, b) => {
-          return new Date(b.date).getTime() - new Date(a.date).getTime();
-        });
-        setBlogs(sortedBlogs);
+        setBlogs(data);
         setLoading(false);
       })
       .catch((err) => {
-        console.error('Failed to fetch blogs.json:', err);
+        console.error('Failed to fetch /api/blogs:', err);
         setLoading(false);
       });
   }, []);

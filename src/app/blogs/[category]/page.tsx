@@ -1,90 +1,127 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import type { Metadata } from 'next';
 import fs from 'fs';
 import path from 'path';
-import Image from 'next/image';
-import Link from 'next/link';
 
-interface BlogMeta {
-  title: string;
-  description: string;
-  image: string;
-  slug: string;
-}
-
-async function getBlogsForCategory(category: string): Promise<BlogMeta[]> {
-  const categoryPath = path.join(process.cwd(), 'src/app/blogs', category);
-  if (!fs.existsSync(categoryPath)) return [];
-
-  const blogDirs = fs.readdirSync(categoryPath);
-  const blogs: BlogMeta[] = [];
-
-  for (const blogDir of blogDirs) {
-    const metadataPath = path.join(categoryPath, blogDir, 'metadata.json');
-    if (fs.existsSync(metadataPath)) {
-      const meta = JSON.parse(fs.readFileSync(metadataPath, 'utf-8'));
-      blogs.push({
-        title: meta.title,
-        description: meta.description,
-        image: meta.image,
-        slug: blogDir,
-      });
-    }
-  }
-
-  return blogs;
-}
-
-type CategoryPageProps = {
-  params: {
-    category: string;
-  };
+// ---------- Types ----------
+type CategoryParams = {
+  params: { category: string };
 };
 
-export default async function CategoryPage({ params }: CategoryPageProps) {
-  const blogs = await getBlogsForCategory(params.category);
+type CategoryMetadata = {
+  title: string;
+  slug: string;
+  category: string;
+  subcategory: string;
+  tag: string;
+  writer: string;
+  date: string;
+  image: string;
+  description: string;
+  heading: string;
+  cta: string;
+};
 
-  if (!blogs.length) {
-    return <h1>No blogs found in {params.category}</h1>;
+type CategoryMetadataMap = {
+  [key: string]: CategoryMetadata;
+};
+
+// ---------- Utils ----------
+function loadCategoryMetadata(): CategoryMetadataMap {
+  const filePath = path.join(process.cwd(), 'src/data/categoryMetadata.json');
+  const jsonData = fs.readFileSync(filePath, 'utf-8');
+  return JSON.parse(jsonData) as CategoryMetadataMap;
+}
+
+// Load once at the top level
+const categoryMap = loadCategoryMetadata();
+
+// ---------- Metadata Generator ----------
+export async function generateMetadata({
+  params,
+}: CategoryParams): Promise<Metadata> {
+  const category = categoryMap[params.category];
+
+  if (!category) {
+    return {
+      title: 'Category Not Found | i Vs. Me',
+      description: 'This category does not exist.',
+    };
+  }
+
+  return {
+    title: `${category.title} Blogs | i Vs. Me`,
+    description: category.description,
+    alternates: {
+      canonical: `https://www.ivsme.in/blogs/${params.category}`,
+    },
+  };
+}
+
+// ---------- Page Component ----------
+export default function CategoryPage({ params }: CategoryParams) {
+  const category = categoryMap[params.category];
+
+  if (!category) {
+    return (
+      <main>
+        <h1>Category not found</h1>
+        <p>
+          The category <code>{params.category}</code> does not exist.
+        </p>
+        <Link href="/blogs">← Back to Blogs</Link>
+      </main>
+    );
   }
 
   return (
-    <main className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">
-        Category: {params.category.replace(/-/g, ' ')}
-      </h1>
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {blogs.map((blog) => (
-          <div key={blog.slug} className="border p-4 rounded shadow">
-            <Link href={`/blogs/${params.category}/${blog.slug}`}>
-              <Image
-                src={blog.image}
-                alt={blog.title}
-                width={400}
-                height={250}
-                className="w-full h-auto rounded mb-2"
-                unoptimized
-              />
-              <h2 className="text-xl font-semibold">{blog.title}</h2>
-            </Link>
-            <p className="text-sm text-gray-600">{blog.description}</p>
+    <main>
+      {/* Hero Section */}
+      <div className="category-hero">
+        <div className="category-hero--overlay" />
+        <div className="category-hero--text--wrapper">
+          <h1 className="category-hero--title title">
+            <span className="h1--span">{category.title}</span>
+            {category.heading}
+          </h1>
+          <div className="category-hero--scroll-down-arrow tooltip">↓</div>
+        </div>
+      </div>
+
+      {/* Blogs Section */}
+      <section className="blogs--section ptb-5 flex-row">
+        <div className="first-section--blogs pb-2 flex-container-3">
+          <p className="section--title">
+            <Link href={`/blogs/${params.category}`}>{category.title}</Link>
+          </p>
+          <div className="first-section--wrapper">
+            <div className="section--container">
+              <Link href={`/blogs/${params.category}`}>
+                <div className="img--wrapper">
+                  <Image
+                    src={category.image}
+                    alt={category.title}
+                    width={587}
+                    height={330}
+                    loading="lazy"
+                  />
+                </div>
+                <h2 className="blogs--category--h2">{category.heading}</h2>
+              </Link>
+              <p>
+                {category.description}{' '}
+                <Link className="para--cta" href={`/blogs/${params.category}`}>
+                  {category.cta}
+                </Link>
+              </p>
+              <Link className="categories--btn" href="/blogs">
+                Read Latest Blogs
+              </Link>
+            </div>
           </div>
-        ))}
+        </div>
       </section>
     </main>
   );
-}
-
-// ✅ This is critical for static generation
-export async function generateStaticParams(): Promise<{ category: string }[]> {
-  const blogsRoot = path.join(process.cwd(), 'src/app/blogs');
-  if (!fs.existsSync(blogsRoot)) return [];
-
-  const categories = fs
-    .readdirSync(blogsRoot)
-    .filter((folder) =>
-      fs.statSync(path.join(blogsRoot, folder)).isDirectory()
-    );
-
-  return categories.map((category) => ({
-    category,
-  }));
 }

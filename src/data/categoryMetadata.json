@@ -1,0 +1,43 @@
+{
+  "weight-training": {
+    "title": "Weight Training",
+    "slug": "weight-training",
+    "category": "weight-training",
+    "subcategory": "",
+    "tag": "",
+    "writer": "",
+    "date": "",
+    "image": "/assets/images/woman-dumbbells-587x330.webp",
+    "description": "Discover weight training tips and techniques for building strength, improving endurance, and achieving fitness goals. Learn how to maximize gains safely with expert advice and workout guides.",
+    "heading": "Effective Weight Training Techniques for All Fitness Levels",
+    "cta": "Find out how weight training can transform your life!"
+  },
+
+  "health-conditions": {
+    "title": "Health Conditions",
+    "slug": "health-conditions",
+    "category": "health-conditions",
+    "subcategory": "",
+    "tag": "",
+    "writer": "",
+    "date": "",
+    "image": "/assets/images/man-dumbbell-curl-587x330.webp",
+    "description": "Discover how weight training can aid recovery and improve strength for individuals managing specific health conditions. Get expert tips on adapting workouts safely for optimal health and resilience.",
+    "heading": "Weight Training for Health Conditions: Safe, Effective, and Empowering",
+    "cta": "Start your recovery journey today!"
+  },
+
+  "fitness-and-fat-loss": {
+    "title": "Fitness and Fat Loss",
+    "slug": "fitness-and-fat-loss",
+    "category": "fitness-and-fat-loss",
+    "subcategory": "",
+    "tag": "",
+    "writer": "",
+    "date": "",
+    "image": "/assets/images/man-metabolism-587x330.webp",
+    "description": "Explore expert insights, proven strategies, and inspiring stories to transform your fitness journey. From effective workouts to sustainable fat loss tips, we've got you covered.",
+    "heading": "Fitness and Fat Loss: Your Path to Unleashing a New You",
+    "cta": "Start your journey to a healthier, fitter you today!"
+  }
+}
