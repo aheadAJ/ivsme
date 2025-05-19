@@ -31,7 +31,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in/blogs',
+    canonical: 'https://www.ivsme.in',
   },
 };
 
@@ -43,27 +43,27 @@ interface BlogMeta {
   slug: string;
 }
 
-async function getAllBlogs(): Promise<BlogMeta[]> {
-  const blogRoot = path.join(process.cwd(), 'src/app/blogs');
-  const categoryDirs = fs.readdirSync(blogRoot);
+async function getAllBlogMetadata(): Promise<BlogMeta[]> {
+  const blogDir = path.join(process.cwd(), 'src/app/blogs');
+  const categoryDirs = fs.readdirSync(blogDir);
   const blogs: BlogMeta[] = [];
 
   for (const category of categoryDirs) {
-    const categoryPath = path.join(blogRoot, category);
-    if (!fs.statSync(categoryPath).isDirectory() || category === 'categories')
-      continue;
+    const categoryPath = path.join(blogDir, category);
+    if (!fs.lstatSync(categoryPath).isDirectory()) continue;
 
-    const blogFolders = fs.readdirSync(categoryPath);
-    for (const blog of blogFolders) {
-      const metaPath = path.join(categoryPath, blog, 'metadata.json');
-      if (fs.existsSync(metaPath)) {
-        const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
+    const blogDirs = fs.readdirSync(categoryPath);
+    for (const blog of blogDirs) {
+      const metadataPath = path.join(categoryPath, blog, 'metadata.json');
+      if (fs.existsSync(metadataPath)) {
+        const metaJson = fs.readFileSync(metadataPath, 'utf8');
+        const meta = JSON.parse(metaJson);
         blogs.push({
           title: meta.title,
           description: meta.description,
           category,
           image: meta.image,
-          slug: blog,
+          slug: `${blog}`,
         });
       }
     }
@@ -73,7 +73,7 @@ async function getAllBlogs(): Promise<BlogMeta[]> {
 }
 
 export default async function BlogsPage() {
-  const blogs = await getAllBlogs();
+  const blogs = await getAllBlogMetadata();
 
   return (
     <>
@@ -113,8 +113,8 @@ export default async function BlogsPage() {
           <div className="hero--overlay" />
           <div className="category-hero--text--wrapper">
             <h1 className="hero--title title">
-              <span className="h1--span">Latest Blogs</span> Empower your
-              journey to fitness &amp; vitality.
+              <span className="h1--span">Latest Blogs</span>Empower your journey
+              to fitness &amp; vitality.
             </h1>
             <div className="category-hero--scroll-down-arrow tooltip">↓</div>
           </div>
@@ -123,29 +123,27 @@ export default async function BlogsPage() {
         <section className="blogs--section ptb-5 flex-row">
           {blogs.map((blog) => (
             <div
-              key={blog.slug}
               className="first-section--blogs pb-2 flex-container-3"
+              key={blog.slug}
             >
               <p className="section--title">
                 <Link href={`/blogs/${blog.category}`}>
                   {blog.category.replace(/-/g, ' ')}
                 </Link>
               </p>
-
               <div className="first-section--wrapper">
                 <div className="section--container">
                   <Link href={`/blogs/${blog.category}/${blog.slug}`}>
                     <div className="img--wrapper">
                       <Image
                         src={blog.image}
-                        alt={blog.title || 'Blog image'}
+                        alt={blog.title}
                         width={587}
                         height={330}
                         loading="lazy"
                       />
                     </div>
                   </Link>
-
                   <h2 className="blogs--category--h2">{blog.title}</h2>
 
                   <p>
@@ -157,12 +155,11 @@ export default async function BlogsPage() {
                       Read More
                     </Link>
                   </p>
-
                   <Link
                     className="categories--btn"
                     href={`/blogs/${blog.category}`}
                   >
-                    More from this category
+                    Blog Categories
                   </Link>
                 </div>
               </div>

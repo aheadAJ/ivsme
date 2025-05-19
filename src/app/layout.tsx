@@ -3,10 +3,10 @@
 // import '@/styles/main/main.scss'; // adjust path if needed
 // import Header from '@/components/Header'; // Adjust path to your header component
 // import Footer from '@/components/Footer'; // Adjust path to your footer component
-import '../styles/main.scss';
-import Header from './components/Header'; // if components is one level up
-import Footer from './components/Footer'; // if components is one level up
-import GoogleAnalytics from './components/GoogleAnalytics'; // adjust path if needed
+import '@/styles/main.scss';
+import Header from '@/app/components/Header'; // if components is one level up
+import Footer from '@/app/components/Footer'; // if components is one level up
+import GoogleAnalytics from '@/app/components/GoogleAnalytics'; // adjust path if needed
 
 // Global defaults for the entire site
 

@@ -6,21 +6,21 @@ import Head from 'next/head';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Fitness & Fat Loss Blogs - i Vs. Me | Burn Fat, Gain Strength, Stay Inspired',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Explore transformative stories and practical tips in the Fitness & Fat Loss category. Real advice, real change – only on i Vs. Me.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'fat loss tips',
+    'fitness journey',
+    'weight loss stories',
+    'i Vs. Me fitness',
   ],
   openGraph: {
     title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+      'Fitness & Fat Loss Blogs - i Vs. Me | Burn Fat, Gain Strength, Stay Inspired',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Explore transformative stories and practical tips in the Fitness & Fat Loss category. Real advice, real change – only on i Vs. Me.',
+    url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss',
     images: [
       {
         url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
@@ -31,7 +31,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in/blogs',
+    canonical: 'https://www.ivsme.in/blogs/fitness-and-fat-loss',
   },
 };
 
@@ -43,37 +43,34 @@ interface BlogMeta {
   slug: string;
 }
 
-async function getAllBlogs(): Promise<BlogMeta[]> {
-  const blogRoot = path.join(process.cwd(), 'src/app/blogs');
-  const categoryDirs = fs.readdirSync(blogRoot);
+async function getFitnessBlogs(): Promise<BlogMeta[]> {
+  const category = 'fitness-and-fat-loss';
+  const categoryPath = path.join(process.cwd(), 'src/app/blogs', category);
   const blogs: BlogMeta[] = [];
 
-  for (const category of categoryDirs) {
-    const categoryPath = path.join(blogRoot, category);
-    if (!fs.statSync(categoryPath).isDirectory() || category === 'categories')
-      continue;
+  if (!fs.existsSync(categoryPath)) return blogs;
 
-    const blogFolders = fs.readdirSync(categoryPath);
-    for (const blog of blogFolders) {
-      const metaPath = path.join(categoryPath, blog, 'metadata.json');
-      if (fs.existsSync(metaPath)) {
-        const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
-        blogs.push({
-          title: meta.title,
-          description: meta.description,
-          category,
-          image: meta.image,
-          slug: blog,
-        });
-      }
+  const blogDirs = fs.readdirSync(categoryPath);
+  for (const blog of blogDirs) {
+    const metadataPath = path.join(categoryPath, blog, 'metadata.json');
+    if (fs.existsSync(metadataPath)) {
+      const metaJson = fs.readFileSync(metadataPath, 'utf8');
+      const meta = JSON.parse(metaJson);
+      blogs.push({
+        title: meta.title,
+        description: meta.description,
+        category,
+        image: meta.image,
+        slug: blog,
+      });
     }
   }
 
   return blogs;
 }
 
-export default async function BlogsPage() {
-  const blogs = await getAllBlogs();
+export default async function FitnessBlogsPage() {
+  const blogs = await getFitnessBlogs();
 
   return (
     <>
@@ -83,13 +80,11 @@ export default async function BlogsPage() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
-              name: 'i Vs. Me',
-              headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+              '@type': 'CollectionPage',
+              url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss',
+              name: 'Fitness & Fat Loss Blogs - i Vs. Me',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Curated stories, tips, and insights on losing fat and gaining strength.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
@@ -97,11 +92,6 @@ export default async function BlogsPage() {
                   '@type': 'ImageObject',
                   url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
                 },
-              },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://www.ivsme.in/search?q={search_term}',
-                'query-input': 'required name=search_term',
               },
             }),
           }}
@@ -113,8 +103,8 @@ export default async function BlogsPage() {
           <div className="hero--overlay" />
           <div className="category-hero--text--wrapper">
             <h1 className="hero--title title">
-              <span className="h1--span">Latest Blogs</span> Empower your
-              journey to fitness &amp; vitality.
+              <span className="h1--span">Fitness & Fat Loss</span>
+              Burn fat. Build strength. Live empowered.
             </h1>
             <div className="category-hero--scroll-down-arrow tooltip">↓</div>
           </div>
@@ -123,31 +113,23 @@ export default async function BlogsPage() {
         <section className="blogs--section ptb-5 flex-row">
           {blogs.map((blog) => (
             <div
-              key={blog.slug}
               className="first-section--blogs pb-2 flex-container-3"
+              key={blog.slug}
             >
-              <p className="section--title">
-                <Link href={`/blogs/${blog.category}`}>
-                  {blog.category.replace(/-/g, ' ')}
-                </Link>
-              </p>
-
               <div className="first-section--wrapper">
                 <div className="section--container">
                   <Link href={`/blogs/${blog.category}/${blog.slug}`}>
                     <div className="img--wrapper">
                       <Image
                         src={blog.image}
-                        alt={blog.title || 'Blog image'}
+                        alt={blog.title}
                         width={587}
                         height={330}
                         loading="lazy"
                       />
                     </div>
                   </Link>
-
                   <h2 className="blogs--category--h2">{blog.title}</h2>
-
                   <p>
                     {blog.description}{' '}
                     <Link
@@ -157,12 +139,8 @@ export default async function BlogsPage() {
                       Read More
                     </Link>
                   </p>
-
-                  <Link
-                    className="categories--btn"
-                    href={`/blogs/${blog.category}`}
-                  >
-                    More from this category
+                  <Link className="categories--btn" href="/blogs">
+                    All Blog Categories
                   </Link>
                 </div>
               </div>
