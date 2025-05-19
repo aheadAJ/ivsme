@@ -17,15 +17,17 @@ interface BlogData {
 
 const blogsDirectory = path.join(process.cwd(), 'src/app/blogs');
 
-export default async function BlogPage({
-  params,
-}: {
-  params: { category: string; slug: string };
-}) {
+type PageProps = {
+  params: {
+    category: string;
+    slug: string;
+  };
+};
+
+export default async function BlogPage({ params }: PageProps) {
   const { category, slug } = params;
 
   const filePath = path.join(blogsDirectory, category, slug, 'metadata.json');
-
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const blog: BlogData = JSON.parse(fileContent);
 
@@ -48,28 +50,4 @@ export default async function BlogPage({
       </a>
     </main>
   );
-}
-
-// ✅ IMPORTANT: Do NOT nest params inside `params: {}` in App Router
-export async function generateStaticParams(): Promise<
-  { category: string; slug: string }[]
-> {
-  const folderNames = fs.readdirSync(blogsDirectory);
-
-  const allParams = folderNames.flatMap((category) => {
-    const categoryPath = path.join(blogsDirectory, category);
-    if (!fs.statSync(categoryPath).isDirectory()) return [];
-
-    const slugs = fs.readdirSync(categoryPath).filter((slugDir) => {
-      const metaPath = path.join(categoryPath, slugDir, 'metadata.json');
-      return fs.existsSync(metaPath);
-    });
-
-    return slugs.map((slug) => ({
-      category,
-      slug,
-    }));
-  });
-
-  return allParams;
 }
