@@ -9,9 +9,20 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true, // Disable image optimization for static export
   },
+
   eslint: {
     ignoreDuringBuilds: true,
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/blogs/category',
+        destination: '/blogs/categories',
+        permanent: true,
+      },
+    ];
+  },
 };
-module.exports = nextConfig;
+
 export default nextConfig;
