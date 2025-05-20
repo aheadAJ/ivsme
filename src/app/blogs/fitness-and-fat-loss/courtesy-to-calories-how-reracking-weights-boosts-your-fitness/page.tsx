@@ -83,7 +83,7 @@ export default function ReRackingWeightBlog() {
             </p>
             <p className="blog--author">
               December 06, 2024 | By{' '}
-              <Link href="../../../writers/anand-jha">Anand Jha</Link>
+              <Link href="/writers/anand-jha">Anand Jha</Link>
             </p>
           </div>
         </div>
@@ -253,7 +253,7 @@ export default function ReRackingWeightBlog() {
               <p className="article--para--border-left">
                 What's one small habit you can commit to this week to improve
                 your fitness routine? Share your thoughts in the{' '}
-                <Link href="../../../contact-us" className="para--cta">
+                <Link href="/contact-us" className="para--cta">
                   contact us page
                 </Link>{' '}
                 !
@@ -261,8 +261,8 @@ export default function ReRackingWeightBlog() {
             </div>
           </article>
           <div className="article--btn--main-div mlr-95">
-            <Link href="../../../blogs">Latest Blogs</Link>
-            <Link href="../../../blogs/categories">Blog Categories</Link>
+            <Link href="/blogs">Latest Blogs</Link>
+            <Link href="/blogs/categories">Blog Categories</Link>
           </div>
           <div className="blog--right-sidebar"></div>
 

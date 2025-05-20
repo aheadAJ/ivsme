@@ -147,10 +147,10 @@ export default function AboutUsPage() {
           </p>
         </section>
         <div className="about-us--btns categories--btn--div">
-          <Link className="categories--btn" href="../blogs">
+          <Link className="categories--btn" href="/blogs">
             Latest Blogs
           </Link>
-          <Link className="categories--btn" href="../blogs/categories">
+          <Link className="categories--btn" href="/blogs/categories">
             Blog Categories
           </Link>
         </div>

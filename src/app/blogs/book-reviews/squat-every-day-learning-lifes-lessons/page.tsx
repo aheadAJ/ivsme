@@ -75,7 +75,7 @@ export default function SquatEveryDayBookPage() {
           <div className="header--highlight">
             <p>
               In "Squat Every Day: Learning Life's Lessons,"{' '}
-              <Link href="../../../writers/anand-jha" className="para--cta">
+              <Link href="/writers/anand-jha" className="para--cta">
                 {' '}
                 Anand Jha
               </Link>{' '}
@@ -86,7 +86,7 @@ export default function SquatEveryDayBookPage() {
             <p className="blog--author">
               Nov. 21, 2024
               {/* <Link
-        href="../../../pages/writers/anand-jha"
+        href="/writers/anand-jha"
         style="text-decoration: underline"
         >Anand Jha</a
       > */}
@@ -279,8 +279,8 @@ export default function SquatEveryDayBookPage() {
           </div>
         </article>
         <div className="article--btn--main-div mlr-95">
-          <Link href="../../../blogs">Latest Blogs</Link>
-          <Link href="../../../blogs/categories">Blog Categories</Link>
+          <Link href="/blogs">Latest Blogs</Link>
+          <Link href="/blogs/categories">Blog Categories</Link>
         </div>
         <div className="blog--right-sidebar" />
       </main>

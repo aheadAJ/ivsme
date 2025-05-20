@@ -82,7 +82,7 @@ export default function ReRackingWeightsBlog() {
             </p>
             <p className="blog--author">
               Nov. 08, 2024 | By{' '}
-              <Link href="../../../writers/anand-jha">Anand Jha</Link>
+              <Link href="/writers/anand-jha">Anand Jha</Link>
             </p>
           </div>
         </div>
@@ -225,8 +225,8 @@ export default function ReRackingWeightsBlog() {
             </div>
           </article>
           <div className="article--btn--main-div mlr-95">
-            <Link href="../../../blogs">Latest Blogs</Link>
-            <Link href="../../../blogs/categories">Blog Categories</Link>
+            <Link href="/blogs">Latest Blogs</Link>
+            <Link href="/blogs/categories">Blog Categories</Link>
           </div>
           <div className="blog--right-sidebar"></div>
         </div>

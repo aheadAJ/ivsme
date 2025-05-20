@@ -1,5 +1,6 @@
 'use client';
-import NavLink from './NavLink';
+
+import NavLink from '@/app/components/NavLink';
 
 export default function Header() {
   return (

@@ -1,5 +1,5 @@
-{
-  "weight-training": {
+[
+  {
     "title": "Weight Training",
     "slug": "weight-training",
     "category": "weight-training",
@@ -13,7 +13,7 @@
     "cta": "Find out how weight training can transform your life!"
   },
 
-  "health-conditions": {
+  {
     "title": "Health Conditions",
     "slug": "health-conditions",
     "category": "health-conditions",
@@ -27,7 +27,7 @@
     "cta": "Start your recovery journey today!"
   },
 
-  "fitness-and-fat-loss": {
+  {
     "title": "Fitness and Fat Loss",
     "slug": "fitness-and-fat-loss",
     "category": "fitness-and-fat-loss",
@@ -39,5 +39,18 @@
     "description": "Explore expert insights, proven strategies, and inspiring stories to transform your fitness journey. From effective workouts to sustainable fat loss tips, we've got you covered.",
     "heading": "Fitness and Fat Loss: Your Path to Unleashing a New You",
     "cta": "Start your journey to a healthier, fitter you today!"
+  },
+  {
+    "title": "Book Reviews",
+    "slug": "book-reviews",
+    "category": "book-reviews",
+    "subcategory": "",
+    "tag": "",
+    "writer": "",
+    "date": "",
+    "image": "/assets/images/squat-every-day-anand-jha-587x330.webp",
+    "description": "Sometimes, it's about showing up, staying consistent, and learning from every challenge. Read stories how others through the power of consistency defied limits and became what they are.",
+    "heading": "Books that will inspire you",
+    "cta": "Get the motivation. Challenge limits."
   }
-}
+]

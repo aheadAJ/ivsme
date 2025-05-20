@@ -82,7 +82,7 @@ export default function MetabolismBlog() {
             </p>
             <p className="blog--author">
               Nov. 29, 2024 | By{' '}
-              <Link href="../../../writers/anand-jha">Anand Jha</Link>
+              <Link href="/writers/anand-jha">Anand Jha</Link>
             </p>
           </div>
         </div>
@@ -256,8 +256,8 @@ export default function MetabolismBlog() {
             </div>
           </article>
           <div className="article--btn--main-div mlr-95">
-            <Link href="../../../blogs">Latest Blogs</Link>
-            <Link href="../../../blogs/categories">Blog Categories</Link>
+            <Link href="/blogs">Latest Blogs</Link>
+            <Link href="/blogs/categories">Blog Categories</Link>
           </div>
           <div className="blog--right-sidebar"></div>
         </div>

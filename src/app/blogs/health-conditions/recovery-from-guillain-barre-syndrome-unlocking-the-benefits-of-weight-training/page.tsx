@@ -84,7 +84,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
             </p>
             <p className="blog--author">
               Nov. 12, 2024 | By{' '}
-              <Link href="../../../writers/anand-jha">Anand Jha</Link>
+              <Link href="/writers/anand-jha">Anand Jha</Link>
             </p>
           </div>
         </div>
@@ -401,8 +401,8 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
             </div>
           </article>
           <div className="article--btn--main-div mlr-95">
-            <Link href="../../../blogs">Latest Blogs</Link>
-            <Link href="../../../blogs/categories">Blog Categories</Link>
+            <Link href="/blogs">Latest Blogs</Link>
+            <Link href="/blogs/categories">Blog Categories</Link>
           </div>
           <div className="blog--right-sidebar"></div>
         </div>
@@ -426,7 +426,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 Through Anand Jha's{' '}
                 <Link
                   className="para--cta"
-                  href="../books/book-review-squat-every-day-learning-lifes-lessons"
+                  href="/books/book-review-squat-every-day-learning-lifes-lessons"
                 >
                   deeply personal journey{' '}
                 </Link>

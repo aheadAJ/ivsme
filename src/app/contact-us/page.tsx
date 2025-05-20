@@ -1,5 +1,5 @@
-// import Image from 'next/image';
-// import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import Head from 'next/head';
 
 export const metadata = {
@@ -93,12 +93,12 @@ export default function ContactUsPage() {
               stronger community—one story at a time!
             </p>
             <div className="contact-us--btns--header">
-              <a className="categories--btn" href="../blogs">
+              <Link className="categories--btn" href="/blogs">
                 Latest Blogs
-              </a>
-              <a className="categories--btn" href="../blogs/categories">
+              </Link>
+              <Link className="categories--btn" href="/blogs/categories">
                 Blog Categories
-              </a>
+              </Link>
             </div>
           </div>
           <div id="contact-form--section" className="contact-form--section">
@@ -167,12 +167,12 @@ export default function ContactUsPage() {
           </div>
         </section>
         <div className="contact-us--btns categories--btn--div mlr-95">
-          <a className="categories--btn" href="../blogs">
+          <Link className="categories--btn" href="/blogs">
             Latest Blogs
-          </a>
-          <a className="categories--btn" href="../blogs/categories">
+          </Link>
+          <Link className="categories--btn" href="/blogs/categories">
             Blog Categories
-          </a>
+          </Link>
         </div>
       </main>
     </>

@@ -1,5 +1,5 @@
-// import Image from 'next/image';
-// import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
 import Head from 'next/head';
 
 export const metadata = {
@@ -85,12 +85,12 @@ export default function ThanksPage() {
             website.
           </h3>
           <div className="thanks--btns categories--btn--div">
-            <a className="categories--btn" href="../blogs">
+            <Link className="categories--btn" href="/blogs">
               Latest Blogs
-            </a>
-            <a className="categories--btn" href="../blogs/categories">
+            </Link>
+            <Link className="categories--btn" href="/blogs/categories">
               Blog Categories
-            </a>
+            </Link>
           </div>
         </section>
       </main>

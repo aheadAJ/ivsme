@@ -97,10 +97,10 @@ export default function Error404Page() {
             Click on the buttons below to keep your workout going strong!
           </h3>
           <div className="categories--btn--div thanks--btns">
-            <Link className="categories--btn" href="../blogs">
+            <Link className="categories--btn" href="/blogs">
               Latest Blogs
             </Link>
-            <Link className="categories--btn" href="../blogs/categories">
+            <Link className="categories--btn" href="/blogs/categories">
               Blog Categories
             </Link>
           </div>

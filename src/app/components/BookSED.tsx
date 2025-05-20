@@ -23,7 +23,7 @@ export default function BookSED() {
             Anand Jha's{' '}
             <Link
               className="para--cta"
-              href="../books/book-review-squat-every-day-learning-lifes-lessons"
+              href="/blogs/book-reviews/squat-every-day-learning-lifes-lessons"
             >
               deeply personal journey{' '}
             </Link>

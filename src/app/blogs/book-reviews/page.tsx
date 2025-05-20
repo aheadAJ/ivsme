@@ -5,22 +5,20 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export const metadata = {
-  title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+  title: 'Book Reviews - i Vs. Me | Discover Inspiring Reads',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Dive into thoughtful book reviews that enlighten, empower, and entertain. Curated titles, honest opinions – only on i Vs. Me.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'book reviews',
+    'non-fiction reviews',
+    'i Vs. Me books',
+    'recommended reading',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'Book Reviews - i Vs. Me | Discover Inspiring Reads',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Dive into thoughtful book reviews that enlighten, empower, and entertain. Curated titles, honest opinions – only on i Vs. Me.',
+    url: 'https://www.ivsme.in/blogs/book-reviews',
     images: [
       {
         url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
@@ -31,7 +29,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical: 'https://www.ivsme.in/blogs/book-reviews',
   },
 };
 
@@ -43,37 +41,34 @@ interface BlogMeta {
   slug: string;
 }
 
-async function getAllBlogMetadata(): Promise<BlogMeta[]> {
-  const blogDir = path.join(process.cwd(), 'src/app/blogs');
-  const categoryDirs = fs.readdirSync(blogDir);
+async function getBookReviewsBlogs(): Promise<BlogMeta[]> {
+  const category = 'book-reviews';
+  const categoryPath = path.join(process.cwd(), 'src/app/blogs', category);
   const blogs: BlogMeta[] = [];
 
-  for (const category of categoryDirs) {
-    const categoryPath = path.join(blogDir, category);
-    if (!fs.lstatSync(categoryPath).isDirectory()) continue;
+  if (!fs.existsSync(categoryPath)) return blogs;
 
-    const blogDirs = fs.readdirSync(categoryPath);
-    for (const blog of blogDirs) {
-      const metadataPath = path.join(categoryPath, blog, 'metadata.json');
-      if (fs.existsSync(metadataPath)) {
-        const metaJson = fs.readFileSync(metadataPath, 'utf8');
-        const meta = JSON.parse(metaJson);
-        blogs.push({
-          title: meta.title,
-          description: meta.description,
-          category,
-          image: meta.image,
-          slug: `${blog}`,
-        });
-      }
+  const blogDirs = fs.readdirSync(categoryPath);
+  for (const blog of blogDirs) {
+    const metadataPath = path.join(categoryPath, blog, 'metadata.json');
+    if (fs.existsSync(metadataPath)) {
+      const metaJson = fs.readFileSync(metadataPath, 'utf8');
+      const meta = JSON.parse(metaJson);
+      blogs.push({
+        title: meta.title,
+        description: meta.description,
+        category,
+        image: meta.image,
+        slug: blog,
+      });
     }
   }
 
   return blogs;
 }
 
-export default async function BlogsPage() {
-  const blogs = await getAllBlogMetadata();
+export default async function BookReviewsPage() {
+  const blogs = await getBookReviewsBlogs();
 
   return (
     <>
@@ -83,13 +78,11 @@ export default async function BlogsPage() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
-              name: 'i Vs. Me',
-              headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+              '@type': 'CollectionPage',
+              url: 'https://www.ivsme.in/blogs/book-reviews',
+              name: 'Book Reviews - i Vs. Me',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Curated reviews of books that inspire personal growth, knowledge, and transformation.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
@@ -97,11 +90,6 @@ export default async function BlogsPage() {
                   '@type': 'ImageObject',
                   url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
                 },
-              },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://www.ivsme.in/search?q={search_term}',
-                'query-input': 'required name=search_term',
               },
             }),
           }}
@@ -113,8 +101,8 @@ export default async function BlogsPage() {
           <div className="hero--overlay" />
           <div className="category-hero--text--wrapper">
             <h1 className="hero--title title">
-              <span className="h1--span">Latest Blogs</span>Empower your journey
-              to fitness &amp; vitality.
+              <span className="h1--span">Book Reviews</span>
+              Read. Reflect. Reimagine.
             </h1>
             <div className="category-hero--scroll-down-arrow tooltip">↓</div>
           </div>
@@ -126,11 +114,6 @@ export default async function BlogsPage() {
               className="first-section--blogs pb-2 flex-container-3"
               key={blog.slug}
             >
-              <p className="section--title">
-                <Link href={`/blogs/${blog.category}`}>
-                  {blog.category.replace(/-/g, ' ')}
-                </Link>
-              </p>
               <div className="first-section--wrapper">
                 <div className="section--container">
                   <Link href={`/blogs/${blog.category}/${blog.slug}`}>
@@ -145,7 +128,6 @@ export default async function BlogsPage() {
                     </div>
                   </Link>
                   <h2 className="blogs--category--h2">{blog.title}</h2>
-
                   <p>
                     {blog.description}{' '}
                     <Link
@@ -155,11 +137,8 @@ export default async function BlogsPage() {
                       Read More
                     </Link>
                   </p>
-                  <Link
-                    className="categories--btn"
-                    href={`/blogs/${blog.category}`}
-                  >
-                    Blog Categories
+                  <Link className="categories--btn" href="/blogs">
+                    All Blog Categories
                   </Link>
                 </div>
               </div>

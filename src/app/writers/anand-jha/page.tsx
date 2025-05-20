@@ -93,7 +93,7 @@ export default function AnandJhaPage() {
             publications. He is also the author of two books:{' '}
             <Link
               className="para--cta"
-              href="../../blogs/categories/books/book-review-squat-every-day-learning-lifes-lessons"
+              href="/blogs/book-reviews/squat-every-day-learning-lifes-lessons"
             >
               Squat Every Day: Learning Life's Lessons
             </Link>{' '}
@@ -125,10 +125,10 @@ export default function AnandJhaPage() {
           </p>
         </section>
         <div className="about-us--btns categories--btn--div">
-          <Link className="categories--btn" href="../../blogs">
+          <Link className="categories--btn" href="/blogs">
             Latest Blogs
           </Link>
-          <Link className="categories--btn" href="../../blogs/categories">
+          <Link className="categories--btn" href="/blogs/categories">
             Blog Categories
           </Link>
         </div>
