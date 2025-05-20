@@ -41,6 +41,7 @@ interface BlogMeta {
   category: string;
   image: string;
   slug: string;
+  date: string; // added to sort blogs by date
 }
 
 async function getAllBlogs(): Promise<BlogMeta[]> {
@@ -54,8 +55,8 @@ async function getAllBlogs(): Promise<BlogMeta[]> {
       continue;
 
     const blogFolders = fs.readdirSync(categoryPath);
-    for (const blog of blogFolders) {
-      const metaPath = path.join(categoryPath, blog, 'metadata.json');
+    for (const blogSlug of blogFolders) {
+      const metaPath = path.join(categoryPath, blogSlug, 'metadata.json');
       if (fs.existsSync(metaPath)) {
         const meta = JSON.parse(fs.readFileSync(metaPath, 'utf8'));
         blogs.push({
@@ -63,13 +64,17 @@ async function getAllBlogs(): Promise<BlogMeta[]> {
           description: meta.description,
           category,
           image: meta.image,
-          slug: blog,
+          slug: blogSlug,
+          date: meta.date,
         });
       }
     }
   }
 
-  return blogs;
+  // Sort by date (latest first)
+  return blogs.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
 }
 
 export default async function BlogsPage() {
