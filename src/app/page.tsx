@@ -1,6 +1,6 @@
-import ClientWrapper from '@/app/components/ClientWrapper';
-
 import type { Metadata } from 'next';
+import BlogSection from '@/app/components/BlogSection';
+import { BlogData } from '@/types/BlogData';
 
 export const metadata: Metadata = {
   title:
@@ -33,7 +33,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomePage() {
+export default async function HomePage() {
+  const res = await fetch('https://www.ivsme.in/api/blogs', {
+    next: { revalidate: 60 },
+  });
+  const blogs: BlogData[] = await res.json();
+
   return (
     <main>
       <div className="hero">
@@ -43,13 +48,14 @@ export default function HomePage() {
             <span className="h1--span">Fitness</span> The ultimate gift you can
             give yourself.
           </h1>
-          <a href="#main-section" className="transparent--btn">
+          <a href="#blog-section" className="transparent--btn">
             Know More
           </a>
           <div className="scroll-down-arrow tooltip">↓</div>
         </div>
       </div>
-      <ClientWrapper />
+
+      <BlogSection blogs={blogs} />
     </main>
   );
 }
