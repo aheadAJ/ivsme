@@ -116,7 +116,7 @@ export default function ContactUsPage() {
               <input
                 type="hidden"
                 name="_autoresponse"
-                defaultValue="Thank you for your response. We will get back to you shortly."
+                defaultValue="We really appreciate you for snatching some moments from your valueable time and contacting us. Surely, we’ll get back to you soon. Until then, stay strong, stay inspired."
               />
               <input
                 type="hidden"

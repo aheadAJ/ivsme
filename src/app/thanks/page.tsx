@@ -51,9 +51,10 @@ export default function ThanksPage() {
         <section className="thanks--body--section"> </section>
         <section className="thanks--section">
           <h3>
-            Your submission has been received. If shortlisted, we’ll be in touch
-            soon. Until then, stay strong, stay inspired! <br /> Meanwhile,
-            please click on the links to continue browsing our website.
+            We have have received your submission. If shortlisted, we’ll be in
+            touch soon. Until then, stay strong, stay inspired! <br />{' '}
+            Meanwhile, please click on the links to continue browsing our
+            website.
           </h3>
           <div className="thanks--btns categories--btn--div">
             <Link className="categories--btn" href="/blogs">
