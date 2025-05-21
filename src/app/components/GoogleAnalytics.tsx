@@ -1,42 +1,26 @@
-"use client";
+'use client';
 
-import Script from "next/script";
+import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
+import Script from 'next/script';
 
-const DEFER_GA = true; // toggle here if needed
+// TypeScript support for gtag
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
+  }
+}
 
 export default function GoogleAnalytics() {
-  if (DEFER_GA) {
-    return (
-      <Script id="ga-scroll-loader" strategy="afterInteractive">
-        {`
-          function loadGoogleAnalytics() {
-            if (window.gtagLoaded) return;
-            window.gtagLoaded = true;
+  const pathname = usePathname();
 
-            var script = document.createElement("script");
-            script.src = "https://www.googletagmanager.com/gtag/js?id=G-ZPWMPNQBG7";
-            script.async = true;
-            document.head.appendChild(script);
-
-            script.onload = function () {
-              window.dataLayer = window.dataLayer || [];
-              function gtag() {
-                dataLayer.push(arguments);
-              }
-              window.gtag = gtag;
-              gtag("js", new Date());
-              gtag("config", "G-ZPWMPNQBG7");
-            };
-          }
-
-          window.addEventListener("scroll", function onScroll() {
-            loadGoogleAnalytics();
-            window.removeEventListener("scroll", onScroll);
-          });
-        `}
-      </Script>
-    );
-  }
+  useEffect(() => {
+    if (!window.gtag) return;
+    window.gtag('config', 'G-ZPWMPNQBG7', {
+      page_path: pathname,
+    });
+  }, [pathname]);
 
   return (
     <>
@@ -47,9 +31,12 @@ export default function GoogleAnalytics() {
       <Script id="gtag-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
+          function gtag(){ dataLayer.push(arguments); }
+          window.gtag = gtag;
           gtag('js', new Date());
-          gtag('config', 'G-ZPWMPNQBG7');
+          gtag('config', 'G-ZPWMPNQBG7', {
+            page_path: window.location.pathname,
+          });
         `}
       </Script>
     </>

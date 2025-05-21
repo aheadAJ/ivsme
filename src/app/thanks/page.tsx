@@ -1,96 +1,60 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import Head from 'next/head';
+'use client';
 
-export const metadata = {
-  title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
-  description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-  keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
-  ],
-  openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
-    description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
-    images: [
-      {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'i Vs. Me Logo',
-      },
-    ],
-  },
-  alternates: {
-    canonical: 'https://www.ivsme.in',
-  },
-};
+import { useEffect } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 
 export default function ThanksPage() {
+  useEffect(() => {
+    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
+      window.gtag('event', 'form_submission', {
+        event_category: 'Contact',
+        event_label: 'Contact Form Submitted',
+        value: 1,
+      });
+    }
+  }, []);
+
   return (
     <>
       <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
-              name: 'i Vs. Me',
-              headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
-              description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
-              publisher: {
-                '@type': 'Organization',
-                name: 'i Vs. Me',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
-                },
-              },
-              potentialAction: {
-                '@type': 'SearchAction',
-                target: 'https://www.ivsme.in/search?q={search_term}',
-                'query-input': 'required name=search_term',
-              },
-            }),
-          }}
+        <title>Thank You – i Vs. Me</title>
+        <meta
+          name="description"
+          content="Thank you for reaching out to i Vs. Me. Your fitness story submission has been received."
+        />
+        <link rel="canonical" href="https://www.ivsme.in/thanks" />
+        <meta property="og:title" content="Thank You – i Vs. Me" />
+        <meta
+          property="og:description"
+          content="Thank you for reaching out to i Vs. Me. Your fitness story submission has been received."
+        />
+        <meta property="og:url" content="https://www.ivsme.in/thanks" />
+        <meta
+          property="og:image"
+          content="https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg"
         />
       </Head>
-      <main>
-        <div className="category-hero">
-          <div className="category-hero--overlay" />
-          <div className="category-hero--text--wrapper">
-            <h1 className="category-hero--title title">
-              <span className="h1--span">Thank you</span>We will get back to you
-              shortly.
+
+      <main className="thanks-page">
+        <section className="thanks-hero">
+          <div className="thanks-hero--overlay" />
+          <div className="thanks-hero--text">
+            <h1 className="thanks-title title">
+              Thank You for Sharing Your Story!
             </h1>
-            {/* <button class="transparent--btn">Know More</button> */}
-            {/* <div class="category-hero--scroll-down-arrow tooltip">&#8595; </div> */}
-          </div>
-        </div>
-        <section className="thanks--body--section"> </section>
-        <section className="thanks--section mlr-95">
-          <h3>
-            Meanwhile, please click on the links to continue browsing our
-            website.
-          </h3>
-          <div className="thanks--btns categories--btn--div">
-            <Link className="categories--btn" href="/blogs">
-              Latest Blogs
-            </Link>
-            <Link className="categories--btn" href="/blogs/categories">
-              Blog Categories
-            </Link>
+            <p className="thanks-subtext">
+              Your submission has been received. If shortlisted, we’ll be in
+              touch soon. Until then, stay strong, stay inspired!
+            </p>
+            <div className="thanks-cta-buttons">
+              <Link href="/blogs" className="categories--btn">
+                Read Latest Blogs
+              </Link>
+              <Link href="/blogs/categories" className="categories--btn">
+                Explore Categories
+              </Link>
+            </div>
           </div>
         </section>
       </main>
