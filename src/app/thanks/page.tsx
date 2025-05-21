@@ -35,26 +35,33 @@ export default function ThanksPage() {
           content="https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg"
         />
       </Head>
-
-      <main className="thanks-page">
-        <section className="thanks-hero">
-          <div className="thanks-hero--overlay" />
-          <div className="thanks-hero--text">
-            <h1 className="thanks-title title">
-              Thank You for Sharing Your Story!
+      <main>
+        <div className="category-hero">
+          <div className="category-hero--overlay"></div>
+          <div className="category-hero--text--wrapper">
+            <h1 className="category-hero--title title">
+              <span className="h1--span">Thank you</span>
+              for Sharing Your Story!
             </h1>
-            <p className="thanks-subtext">
-              Your submission has been received. If shortlisted, we’ll be in
-              touch soon. Until then, stay strong, stay inspired!
-            </p>
-            <div className="thanks-cta-buttons">
-              <Link href="/blogs" className="categories--btn">
-                Read Latest Blogs
-              </Link>
-              <Link href="/blogs/categories" className="categories--btn">
-                Explore Categories
-              </Link>
-            </div>
+            {/* <button className="transparent--btn">Know More</button>
+
+          <div className="category-hero--scroll-down-arrow tooltip">&#8595; </div> */}
+          </div>
+        </div>
+        <section className="thanks--body--section"> </section>
+        <section className="thanks--section">
+          <h3>
+            Your submission has been received. If shortlisted, we’ll be in touch
+            soon. Until then, stay strong, stay inspired! <br /> Meanwhile,
+            please click on the links to continue browsing our website.
+          </h3>
+          <div className="thanks--btns categories--btn--div">
+            <Link className="categories--btn" href="/blogs">
+              Latest Blogs
+            </Link>
+            <Link className="categories--btn" href="/blogs/categories">
+              Blog Categories
+            </Link>
           </div>
         </section>
       </main>

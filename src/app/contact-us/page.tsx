@@ -108,7 +108,11 @@ export default function ContactUsPage() {
               method="POST"
               id="contact-form"
             >
-              <input type="hidden" name="_next" defaultValue="/thanks" />
+              <input
+                type="hidden"
+                name="_next"
+                defaultValue="https://www.ivsme.in/thanks"
+              />
               <input
                 type="hidden"
                 name="_autoresponse"
