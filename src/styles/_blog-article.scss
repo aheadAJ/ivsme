@@ -35,18 +35,7 @@
 .blog--para--top-margin {
   padding-top: 16px;
 }
-// .blog--para > ul,
-// .blog--para > ol {
-//   background-color: rgba($dark-clr, 0.1);
-//   padding: 18px 2.5% 0 2.5%;
-// }
-// .blog--para > ol {
-//   padding-left: 30px;
-// }
-.blog--para {
-  width: 95%;
-  margin: auto;
-}
+
 .article--body {
   blockquote p {
     padding: 12px 6px 16px 16px;
@@ -73,10 +62,7 @@
       font-size: $xx-large !important;
     }
   }
-  .blog--para {
-    width: 50% !important;
-    margin: 0 30% 0 20% !important;
-  }
+
   .blog--first--para {
     margin-top: 10px;
     // width: 50% !important;

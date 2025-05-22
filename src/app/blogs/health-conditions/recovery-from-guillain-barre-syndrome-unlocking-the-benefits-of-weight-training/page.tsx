@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -90,8 +92,8 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className="mlr-95-blog">
+              <p className="blog--first--para mlr-95-blog--top-margin">
                 I was doing lateral pull-downs at the gym inside our residential
                 complex when a man in his forties stood by my side. He was tall,
                 erect, with a lanky frame, a slight belly, protruding from his
@@ -129,7 +131,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
             </div>
             {/* <div class="blog--ads google-blog-ad" ></div> */}
             <div className="blog--photo">
-              <div className="img--wrapper  mlr-95">
+              <div className="img--wrapper  mlr-95-blog">
                 <Image
                   src="/assets/images/man-dumbbell-curl-587x330.webp"
                   alt="AI photo of a man doing dumbbell curls"
@@ -139,7 +141,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className="mlr-95-blog mlr-95-blog">
               <p>
                 "I hope your doctor has permitted you," I mumbled, not knowing
                 what to say. He nodded in affirmation. Watching him do leg
@@ -194,7 +196,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
               </div>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper  mlr-95">
+              <div className="img--wrapper  mlr-95-blog">
                 <Image
                   src="/assets/images/dumbbell-300x169.webp"
                   alt="Dumbbells neatly arranged on dumbbell rack"
@@ -204,7 +206,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className="mlr-95-blog mlr-95-blog">
               <h2>
                 The Need for Proper Weight Training Protocols for Guillain-Barré
                 Syndrome
@@ -252,7 +254,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 stability, mobility, and overall strength.
               </p>
             </div>
-            <div className="blog--para article--para--highlight">
+            <div className="mlr-95-blog article--para--highlight">
               <h3>Why Weight Training Helps in GBS Recovery</h3>
               <ul>
                 <li>
@@ -311,7 +313,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 </li>
               </ul>
             </div>
-            <div className="blog--para blog--para--top-margin mlr-95">
+            <div className="mlr-95-blog mlr-95-blog--top-margin mlr-95-blog">
               <h2>The Importance of Professional Guidance</h2>
               <p>
                 It is vital for GBS patients to work with a physical therapist
@@ -334,7 +336,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 advice.
               </p>
             </div>
-            <div className="blog--para article--para--highlight">
+            <div className="mlr-95-blog article--para--highlight">
               <h2>Important Caveats to Remember</h2>
               <ul>
                 <li>
@@ -386,7 +388,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 </li>
               </ul>
             </div>
-            <div className="blog--para blog--para--top-margin mlr-95">
+            <div className="mlr-95-blog mlr-95-blog--top-margin mlr-95-blog">
               <h2>Final Thoughts </h2>
               <p>
                 Meeting the man at the gym was a reminder of the resilience and
@@ -400,72 +402,10 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
+          <BlogBottomCategories />
         </div>
-        <div className="blog--right-sidebar"></div>
-        <div className="book mlr-95">
-          <h3 className="">Liked this article? You'll love this book.</h3>
-          <div className="book--container grid">
-            <div className="img--wrapper">
-              <Image
-                src="/assets/images/book-squat-every-day-anand-jha-192x300.webp"
-                alt="Image of Book Cover 'Squat Every Day' by Anand Jha"
-                width={192}
-                height={300}
-                loading="lazy"
-              />
-            </div>
-            <div className="squat-every-day--desc">
-              <p>
-                <b>"Squat Every Day"</b> isn't just about lifting weights—it's
-                about discovering the power of persistence and mental strength.
-                Through Anand Jha's{' '}
-                <Link
-                  className="para--cta"
-                  href="/books/book-review-squat-every-day-learning-lifes-lessons"
-                >
-                  deeply personal journey{' '}
-                </Link>
-                , you'll learn how to push past your limits, both physically and
-                mentally.
-              </p>
-              <p>
-                Even if you're not into weight training, the mindset this book
-                promotes will resonate with anyone striving to break barriers
-                and achieve more. It will teach you how to turn challenges into
-                opportunities for growth.
-              </p>
-              <p>
-                Ready to dive deeper? Get your copy now on{' '}
-                <Link
-                  className="para--cta"
-                  href="https://www.amazon.in/dp/8195809588"
-                >
-                  Amazon{' '}
-                </Link>
-                or from the{' '}
-                <Link
-                  className="para--cta"
-                  href="https://www.wexpressyou.com/store/product/squat-every-day-anand-jha/"
-                >
-                  publisher's e-store{' '}
-                </Link>
-                . You can also grab the{' '}
-                <Link
-                  className="para--cta"
-                  href="https://www.amazon.com/dp/B0CBWZGKJ9"
-                >
-                  Kindle{' '}
-                </Link>
-                edition.
-              </p>
-            </div>
-          </div>
-        </div>
+
+        <BookSEDBlogBottom />
       </main>
     </>
   );

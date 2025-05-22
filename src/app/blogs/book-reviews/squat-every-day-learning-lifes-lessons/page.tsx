@@ -1,6 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -95,7 +97,7 @@ export default function SquatEveryDayBookPage() {
         </div>
         <div className="blog--flex"> </div>
         <article className="article--body">
-          <div className="blog--para">
+          <div className="mlr-95-blog">
             <p className="blog--first--para blog--para--top-margin">
               As someone in my 40s who's been into weight training for a while,
               I picked up <em>Squat Every Day</em> with mixed feelings. On the
@@ -130,16 +132,19 @@ export default function SquatEveryDayBookPage() {
               can make or break your set. This book acknowledges that.
             </p>
           </div>
-          <div className="img--wrapper mr-70">
-            <Image
-              src="/assets/images/squat-every-day-anand-jha-587x330.webp"
-              alt="Image of Book Cover 'Squat Every Day' by Anand Jha"
-              width={587}
-              height={330}
-              loading="lazy"
-            />
+          <div className="blog--photo">
+            <div className="img--wrapper mlr-95-blog">
+              <Image
+                src="/assets/images/squat-every-day-anand-jha-587x330.webp"
+                alt="Image of Book Cover 'Squat Every Day' by Anand Jha"
+                width={587}
+                height={330}
+                loading="lazy"
+              />
+            </div>
           </div>
-          <div className="blog--para blog--para--top-margin">
+
+          <div className="mlr-95-blog ">
             <p>
               One of the most powerful moments in the book is when Jha describes
               a squat attempt where he almost fails. He's stuck, physically
@@ -207,7 +212,7 @@ export default function SquatEveryDayBookPage() {
               looking to grow beyond their limits.
             </p>
           </div>
-          <div className="blog--para blog--para--top-margin article--para--highlight article--para--highlight--mb-16">
+          <div className="mlr-95-blog blog--para--top-margin article--para--highlight article--para--highlight--mb-16">
             <h3>
               <strong>
                 This review has been drafted by ChatGPT based on the following
@@ -221,68 +226,9 @@ export default function SquatEveryDayBookPage() {
               reflections and relevant themes from the book?"
             </p>
           </div>
-          <div className="book mlr-95">
-            <h3 className="">
-              Enjoyed this review? You'll love the book that inspired it.
-            </h3>
-            <div className="book--container grid">
-              <div className="img--wrapper">
-                <Image
-                  src="/assets/images/book-squat-every-day-anand-jha-192x300.webp"
-                  alt="Image of Book Cover 'Squat Every Day' by Anand Jha"
-                  width={192}
-                  height={300}
-                  loading="lazy"
-                />
-              </div>
-              <div className="squat-every-day--desc">
-                <p>
-                  <b>"Squat Every Day"</b> isn't just about lifting weights—it's
-                  about discovering the power of persistence and mental
-                  strength. Through Anand Jha's deeply personal journey, you'll
-                  learn how to push past your limits, both physically and
-                  mentally.
-                </p>
-                <p>
-                  Even if you're not into weight training, the mindset this book
-                  promotes will resonate with anyone striving to break barriers
-                  and achieve more. It will teach you how to turn challenges
-                  into opportunities for growth.
-                </p>
-                <p>
-                  Ready to dive deeper? Get your copy now on{' '}
-                  <Link
-                    className="para--cta"
-                    href="https://www.amazon.in/dp/8195809588"
-                  >
-                    Amazon
-                  </Link>{' '}
-                  or from the{' '}
-                  <Link
-                    className="para--cta"
-                    href="https://www.wexpressyou.com/store/product/squat-every-day-anand-jha/"
-                  >
-                    {' '}
-                    publisher's e-store{' '}
-                  </Link>
-                  . You can also grab the{' '}
-                  <Link
-                    className="para--cta"
-                    href="https://www.amazon.com/dp/B0CBWZGKJ9"
-                  >
-                    Kindle{' '}
-                  </Link>
-                  edition.
-                </p>
-              </div>
-            </div>
-          </div>
+          <BookSEDBlogBottom />
         </article>
-        <div className="article--btn--main-div mlr-95">
-          <Link href="/blogs">Latest Blogs</Link>
-          <Link href="/blogs/categories">Blog Categories</Link>
-        </div>
-        <div className="blog--right-sidebar" />
+        <BlogBottomCategories />
       </main>
     </>
   );

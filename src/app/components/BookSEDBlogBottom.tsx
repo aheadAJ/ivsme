@@ -2,9 +2,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function BookSED() {
+export default function BookSEDBlogBottom() {
   return (
-    <div className="book mlr-95">
+    <div className="book mlr-95-blog">
       <h3 className="">Liked this article? You'll love this book.</h3>
       <div className="book--container grid">
         <div className="img--wrapper">

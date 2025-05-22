@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -90,8 +91,8 @@ export default function EatSleepLiftBlog() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para mlr-95">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className=" mlr-95-blog">
+              <p className="blog--first--para --top-margin">
                 When it comes to muscle building, weight training, while
                 essential, is just one part of the triad that leads to muscle
                 growth. To achieve optimal results, equal attention must be
@@ -107,7 +108,7 @@ export default function EatSleepLiftBlog() {
                 importance of recovery—particularly sleep—and nutrition.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Recovery: The Foundation of Muscle Growth
               </h2>
@@ -144,7 +145,7 @@ export default function EatSleepLiftBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Nutrition: Fuel for Muscle Repair
               </h2>
@@ -170,7 +171,7 @@ export default function EatSleepLiftBlog() {
                 hampers your progress.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 The Triad: Training, Recovery, and Nutrition
               </h2>
@@ -183,7 +184,7 @@ export default function EatSleepLiftBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper  mlr-95">
+              <div className="img--wrapper mlr-95-blog">
                 <Image
                   src="/assets/images/sleep-eat-train-587x386.webp"
                   alt="AI photo of a man training with weights, healthy food and sleeping"
@@ -193,8 +194,10 @@ export default function EatSleepLiftBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
-              <h3>Assessing Your Progress</h3>
+            <div className=" mlr-95-blog">
+              <h2 className="article--para--border-left">
+                Assessing Your Progress
+              </h2>
               <p>
                 How do you know if your approach is working? The easiest metric
                 is how you feel during your waking hours. Are you energized,
@@ -207,7 +210,7 @@ export default function EatSleepLiftBlog() {
                   sleep quality or ensuring adequate rest days.
                 </p>
                 <p>
-                  <strong>Lack of progress in strength or muscle size?</strong>
+                  <strong>Lack of progress in strength or muscle size?</strong>{' '}
                   Review your training plan to ensure progressive overload.
                 </p>
                 <p>
@@ -217,7 +220,7 @@ export default function EatSleepLiftBlog() {
                 </p>
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <p>
                 Building muscle isn't just about lifting weights. It's about
                 understanding and respecting the interplay between training,
@@ -232,14 +235,11 @@ export default function EatSleepLiftBlog() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
+
+          <BlogBottomCategories />
         </div>
-        <div className="blog--right-sidebar"></div>
-        <BookSED />
+
+        <BookSEDBlogBottom />
       </main>
     </>
   );

@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -88,7 +89,7 @@ export default function ReRackingWeightsBlog() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para">
+            <div className="mlr-95-blog">
               <p className="blog--first--para blog--para--top-margin">
                 "Hey, buddy," I called out, pointing at the man who had just
                 finished his set. "Could you put the dumbbells back on the
@@ -126,7 +127,7 @@ export default function ReRackingWeightsBlog() {
             </div>
             {/* <div class="blog--ads google-blog-ad" ></div> */}
             <div className="blog--photo">
-              <div className="img--wrapper mlr-95">
+              <div className="img--wrapper mlr-95-blog">
                 <Image
                   src="/assets/images/woman-dumbbells-587x330.webp"
                   alt="AI photo of a woma walking with dumbbells"
@@ -136,7 +137,7 @@ export default function ReRackingWeightsBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className="mlr-95-blog">
               <p>
                 As I warmed up, his response lingered. He wasn't wrong. Many of
                 us leave weights scattered around. It's a habit, and habits, as
@@ -156,7 +157,7 @@ export default function ReRackingWeightsBlog() {
               <p>The more I thought, the more possibilities it opened up.</p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper  mlr-95">
+              <div className="img--wrapper  mlr-95-blog">
                 <Image
                   src="/assets/images/dumbbell-300x169.webp"
                   alt="AI photo of dumbbells neatly arranged on dumbbell rack"
@@ -166,7 +167,7 @@ export default function ReRackingWeightsBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para article--para--highlight">
+            <div className="mlr-95-blog article--para--highlight">
               <h2>Why Re-Racking Weights is Good for You</h2>
               <ul>
                 <li>
@@ -209,7 +210,7 @@ export default function ReRackingWeightsBlog() {
                 </li>
               </ul>
             </div>
-            <div className="blog--para mlr-95 blog--para--top-margin">
+            <div className="mlr-95-blog blog--para--top-margin">
               <p>
                 Re-racking weights might seem insignificant, but it's a simple
                 habit with big benefits. You're not just tidying up the gym but
@@ -224,13 +225,9 @@ export default function ReRackingWeightsBlog() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
+          <BlogBottomCategories />
         </div>
-        <BookSED />
+        <BookSEDBlogBottom />
       </main>
     </>
   );

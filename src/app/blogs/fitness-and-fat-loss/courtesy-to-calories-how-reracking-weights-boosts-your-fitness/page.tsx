@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -89,8 +90,8 @@ export default function ReRackingWeightBlog() {
         </div>
         <div className="blog--flex">
           <article>
-            <div className="blog--para mlr-95">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className="mlr-95-blog">
+              <p className="blog--first--para --top-margin">
                 People in the gym often loathe re-racking weights. For one, it's
                 because no one else seems to do it, and second, there's little
                 obvious incentive—except for a few good souls who genuinely care
@@ -99,7 +100,7 @@ export default function ReRackingWeightBlog() {
                 opportunity for fitness gains. Here's how:
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className="mlr-95-blog">
               <h2>Functional Training in Action</h2>
               <p>
                 Re-racking weights mimics real-life movements like lifting,
@@ -113,7 +114,7 @@ export default function ReRackingWeightBlog() {
                 to increase the challenge and amplify benefits.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Farmer's Walk Without Extra Time</h2>
               <p>
                 As you carry weights back to the rack, you're essentially
@@ -138,7 +139,7 @@ export default function ReRackingWeightBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Build Grip Strength and Forearm Endurance</h2>
               <p>
                 Handling weights strengthens your grip, a crucial component for
@@ -150,7 +151,7 @@ export default function ReRackingWeightBlog() {
                 workout.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Boost Stability and Balance</h2>
               <p>
                 Carrying and placing weights demands controlled movements,
@@ -164,7 +165,7 @@ export default function ReRackingWeightBlog() {
                 body.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Activate Your Core</h2>
               <p>
                 Each time you lift and move weights, your core works to
@@ -177,7 +178,7 @@ export default function ReRackingWeightBlog() {
                 a stronger core.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Achieve Symmetry by Using Your Non-Dominant Side</h2>
               <p>
                 Intentionally using your less-dominant side to lift and rerack
@@ -190,7 +191,7 @@ export default function ReRackingWeightBlog() {
                 on your weaker side and progress gradually.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Reinforce Proper Form</h2>
               <p>
                 Re-racking weights is a chance to practice controlled,
@@ -203,7 +204,7 @@ export default function ReRackingWeightBlog() {
                 says personal trainer Mark Thompson.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Cool Down Effectively</h2>
               <p>
                 Think of re-racking weights as an active cool-down. It helps
@@ -215,7 +216,7 @@ export default function ReRackingWeightBlog() {
                 for maximum recovery benefits.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Burn Extra Calories Without Effort</h2>
               <p>
                 The additional movements involved in re-racking contribute to
@@ -223,7 +224,7 @@ export default function ReRackingWeightBlog() {
                 yet effective way to make every movement count.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Small Habits, Big Gains</h2>
               <p>
                 Consistently re-racking weights builds discipline and adds
@@ -236,7 +237,7 @@ export default function ReRackingWeightBlog() {
                 efforts repeated day in and day out. - Robert Collier
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Conclusion</h2>
               <p>
                 Re-racking weights is far more than a courtesy—it's an
@@ -248,7 +249,7 @@ export default function ReRackingWeightBlog() {
                 weights back. You're not just cleaning up; you're leveling up.
               </p>
             </div>
-            <div className="blog--para mlr-95 article--top-border">
+            <div className=" mlr-95-blog article--top-border">
               <h2 className="article--para--border-left">Challenge for You</h2>
               <p className="article--para--border-left">
                 What's one small habit you can commit to this week to improve
@@ -260,14 +261,9 @@ export default function ReRackingWeightBlog() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
-
-          <BookSED />
+          <BlogBottomCategories />
         </div>
+        <BookSEDBlogBottom />
       </main>
     </>
   );

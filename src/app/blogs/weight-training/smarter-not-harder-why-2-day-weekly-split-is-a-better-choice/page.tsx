@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -89,8 +90,8 @@ export default function TwoDaySplit() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para mlr-95">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className=" mlr-95-blog">
+              <p className="blog--first--para --top-margin">
                 Despite the world of weight training being completely
                 transformed by recent research and science, many still seem to
                 be training in the medieval age.
@@ -103,7 +104,7 @@ export default function TwoDaySplit() {
                 alternatives.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Why the 5/6-Day Split Persists
               </h2>
@@ -127,7 +128,7 @@ export default function TwoDaySplit() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper mlr-95">
+              <div className="img--wrapper mlr-95-blog">
                 <Image
                   src="/assets/images/ai-img-train-smart-587x330.webp"
                   alt="AI photo of a man squatting the gym while his trainer is running towards him"
@@ -137,7 +138,7 @@ export default function TwoDaySplit() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 The Key to Optimization: Recovery
               </h2>
@@ -170,7 +171,7 @@ export default function TwoDaySplit() {
                 alternatives.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 The Science-Backed Approach: Two-Day-a-Week Training
               </h2>
@@ -210,7 +211,7 @@ export default function TwoDaySplit() {
                 volume depending on the specific aim.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Personalization is Key
               </h2>
@@ -230,7 +231,7 @@ export default function TwoDaySplit() {
                 is crucial.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Lifestyle Factors in Recovery
               </h2>
@@ -256,7 +257,7 @@ export default function TwoDaySplit() {
                 results.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Balancing Science with Experience
               </h2>
@@ -269,7 +270,7 @@ export default function TwoDaySplit() {
                 about finding what works for you.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 The Muscle Pump and Motivation
               </h2>
@@ -283,7 +284,7 @@ export default function TwoDaySplit() {
                 though is not set in stone but is the kind of the upper limit.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Meta-Analysis Insights
               </h2>
@@ -301,7 +302,7 @@ export default function TwoDaySplit() {
                 recovery that maximizes the benefits of each workout.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 A Flexible Split for Busy Lifestyles
               </h2>
@@ -339,14 +340,9 @@ export default function TwoDaySplit() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
+          <BlogBottomCategories />
         </div>
-        <div className="blog--right-sidebar"></div>
-        <BookSED />
+        <BookSEDBlogBottom />
       </main>
     </>
   );

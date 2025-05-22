@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -88,8 +89,8 @@ export default function MetabolismBlog() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para mlr-95">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className=" mlr-95-blog">
+              <p className="blog--first--para --top-margin">
                 Let's talk about fat loss. The magic formula is pretty simple:
                 eat fewer calories than your body needs, and move more to burn
                 off those extra calories. Pretty straightforward, right? In
@@ -115,7 +116,7 @@ export default function MetabolismBlog() {
                 tab.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>Why Metabolism Matters More as You Progress</h2>
               <p>
                 Okay, so let's break it down. Metabolism is the process through
@@ -145,7 +146,7 @@ export default function MetabolismBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>How to Optimize Your Metabolism</h2>
               <p>
                 Here's where the fun begins. First, let me tell you how I'm
@@ -185,7 +186,7 @@ export default function MetabolismBlog() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper  mr-70">
+              <div className="img--wrapper  mlr-95-blog">
                 <Image
                   src="/assets/images/aj-gym-winking-triceps-900x554.webp"
                   alt="Photo of a 50 plus man after weight training"
@@ -195,7 +196,7 @@ export default function MetabolismBlog() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2>The Big Picture: Sustainable Weight Loss</h2>
               <p>
                 The real secret to lasting fat loss isn't just about creating a
@@ -244,7 +245,7 @@ export default function MetabolismBlog() {
                 everything running smoothly.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <p className="article--para--highlight--box">
                 So, there you have it! To keep your metabolism in tip-top shape
                 and break through those frustrating plateaus, remember: it's not
@@ -255,14 +256,10 @@ export default function MetabolismBlog() {
               </p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
+          <BlogBottomCategories />
         </div>
         <div className="blog--right-sidebar"></div>
-        <BookSED />
+        <BookSEDBlogBottom />
       </main>
     </>
   );

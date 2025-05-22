@@ -1,7 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Head from 'next/head';
-import BookSED from '@/app/components/BookSED';
+import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
+import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
@@ -90,8 +91,8 @@ export default function NewYear2025FitnessGoals() {
         </div>
         <div className="blog--flex">
           <article className="article--body">
-            <div className="blog--para mlr-95">
-              <p className="blog--first--para blog--para--top-margin">
+            <div className=" mlr-95-blog">
+              <p className="blog--first--para --top-margin">
                 As the calendar flips to 2025, the air buzzes with renewed
                 energy and a flurry of resolutions. Among the most popular—and
                 perhaps most abandoned—is the promise of better fitness. But
@@ -103,7 +104,7 @@ export default function NewYear2025FitnessGoals() {
                 remain consistent, and ensure you don't quit midway.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Beginner Schedules: Building a Strong Foundation
               </h2>
@@ -147,7 +148,7 @@ export default function NewYear2025FitnessGoals() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Embrace Simplicity: Don't Overthink It
               </h2>
@@ -174,7 +175,7 @@ export default function NewYear2025FitnessGoals() {
                 Everything else will follow naturally.
               </p>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 A New Definition of Progress
               </h2>
@@ -207,7 +208,7 @@ export default function NewYear2025FitnessGoals() {
               </p>
             </div>
             <div className="blog--photo">
-              <div className="img--wrapper  mlr-95">
+              <div className="img--wrapper  mlr-95-blog">
                 <Image
                   src="/assets/images/woman-running-587x330.webp"
                   alt="AI photo of a woman running"
@@ -217,7 +218,7 @@ export default function NewYear2025FitnessGoals() {
                 />
               </div>
             </div>
-            <div className="blog--para mlr-95">
+            <div className=" mlr-95-blog">
               <h2 className="article--para--border-left">
                 Fitness: A Lifelong Affair
               </h2>
@@ -236,13 +237,9 @@ export default function NewYear2025FitnessGoals() {
               <p>Here's to a fitter, stronger, and happier you in 2025!</p>
             </div>
           </article>
-          <div className="article--btn--main-div mlr-95">
-            <Link href="/blogs">Latest Blogs</Link>
-            <Link href="/blogs/categories">Blog Categories</Link>
-          </div>
-          <div className="blog--right-sidebar"></div>
-          <BookSED />
+          <BlogBottomCategories />
         </div>
+        <BookSEDBlogBottom />
       </main>
     </>
   );
