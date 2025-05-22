@@ -210,7 +210,7 @@ export default function ReRackingWeightsBlog() {
                 </li>
               </ul>
             </div>
-            <div className="mlr-95-blog blog--para--top-margin">
+            <div className="mlr-95-blog ">
               <p>
                 Re-racking weights might seem insignificant, but it's a simple
                 habit with big benefits. You're not just tidying up the gym but

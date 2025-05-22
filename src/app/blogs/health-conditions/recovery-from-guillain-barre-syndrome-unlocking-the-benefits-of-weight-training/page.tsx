@@ -93,7 +93,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
         <div className="blog--flex">
           <article className="article--body">
             <div className="mlr-95-blog">
-              <p className="blog--first--para mlr-95-blog--top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 I was doing lateral pull-downs at the gym inside our residential
                 complex when a man in his forties stood by my side. He was tall,
                 erect, with a lanky frame, a slight belly, protruding from his
@@ -313,7 +313,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 </li>
               </ul>
             </div>
-            <div className="mlr-95-blog mlr-95-blog--top-margin mlr-95-blog">
+            <div className="mlr-95-blog ">
               <h2>The Importance of Professional Guidance</h2>
               <p>
                 It is vital for GBS patients to work with a physical therapist
@@ -388,7 +388,7 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
                 </li>
               </ul>
             </div>
-            <div className="mlr-95-blog mlr-95-blog--top-margin mlr-95-blog">
+            <div className="mlr-95-blog ">
               <h2>Final Thoughts </h2>
               <p>
                 Meeting the man at the gym was a reminder of the resilience and

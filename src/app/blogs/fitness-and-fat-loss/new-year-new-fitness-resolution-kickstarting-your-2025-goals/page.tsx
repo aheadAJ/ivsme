@@ -92,7 +92,7 @@ export default function NewYear2025FitnessGoals() {
         <div className="blog--flex">
           <article className="article--body">
             <div className=" mlr-95-blog">
-              <p className="blog--first--para --top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 As the calendar flips to 2025, the air buzzes with renewed
                 energy and a flurry of resolutions. Among the most popular—and
                 perhaps most abandoned—is the promise of better fitness. But

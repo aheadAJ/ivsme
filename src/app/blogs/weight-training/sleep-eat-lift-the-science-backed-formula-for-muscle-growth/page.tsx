@@ -92,7 +92,7 @@ export default function EatSleepLiftBlog() {
         <div className="blog--flex">
           <article className="article--body">
             <div className=" mlr-95-blog">
-              <p className="blog--first--para --top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 When it comes to muscle building, weight training, while
                 essential, is just one part of the triad that leads to muscle
                 growth. To achieve optimal results, equal attention must be

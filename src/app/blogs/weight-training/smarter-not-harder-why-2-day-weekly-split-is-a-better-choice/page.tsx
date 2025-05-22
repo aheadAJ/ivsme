@@ -91,7 +91,7 @@ export default function TwoDaySplit() {
         <div className="blog--flex">
           <article className="article--body">
             <div className=" mlr-95-blog">
-              <p className="blog--first--para --top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 Despite the world of weight training being completely
                 transformed by recent research and science, many still seem to
                 be training in the medieval age.

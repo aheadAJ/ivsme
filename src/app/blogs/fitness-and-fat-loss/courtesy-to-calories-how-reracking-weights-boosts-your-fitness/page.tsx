@@ -91,7 +91,7 @@ export default function ReRackingWeightBlog() {
         <div className="blog--flex">
           <article>
             <div className="mlr-95-blog">
-              <p className="blog--first--para --top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 People in the gym often loathe re-racking weights. For one, it's
                 because no one else seems to do it, and second, there's little
                 obvious incentive—except for a few good souls who genuinely care

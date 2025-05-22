@@ -90,7 +90,7 @@ export default function MetabolismBlog() {
         <div className="blog--flex">
           <article className="article--body">
             <div className=" mlr-95-blog">
-              <p className="blog--first--para --top-margin">
+              <p className="blog--first--para blog--para--top-margin">
                 Let's talk about fat loss. The magic formula is pretty simple:
                 eat fewer calories than your body needs, and move more to burn
                 off those extra calories. Pretty straightforward, right? In
