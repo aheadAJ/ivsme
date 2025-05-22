@@ -5,15 +5,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 
 export default function ThanksPage() {
-  useEffect(() => {
-    if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
-      window.gtag('event', 'form_submission', {
-        event_category: 'Contact',
-        event_label: 'Contact Form Submitted',
-        value: 1,
-      });
-    }
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>

@@ -1,26 +1,42 @@
 'use client';
 
-import { useEffect } from 'react';
-import { usePathname } from 'next/navigation';
 import Script from 'next/script';
 
-// TypeScript support for gtag
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag: (...args: unknown[]) => void;
-  }
-}
+const DEFER_GA = true; // toggle here if needed
 
 export default function GoogleAnalytics() {
-  const pathname = usePathname();
+  if (DEFER_GA) {
+    return (
+      <Script id="ga-scroll-loader" strategy="afterInteractive">
+        {`
+          function loadGoogleAnalytics() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
 
-  useEffect(() => {
-    if (!window.gtag) return;
-    window.gtag('config', 'G-ZPWMPNQBG7', {
-      page_path: pathname,
-    });
-  }, [pathname]);
+            var script = document.createElement("script");
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-ZPWMPNQBG7";
+            script.async = true;
+            document.head.appendChild(script);
+
+            script.onload = function () {
+              window.dataLayer = window.dataLayer || [];
+              function gtag() {
+                dataLayer.push(arguments);
+              }
+              window.gtag = gtag;
+              gtag("js", new Date());
+              gtag("config", "G-ZPWMPNQBG7");
+            };
+          }
+
+          window.addEventListener("scroll", function onScroll() {
+            loadGoogleAnalytics();
+            window.removeEventListener("scroll", onScroll);
+          });
+        `}
+      </Script>
+    );
+  }
 
   return (
     <>
@@ -31,12 +47,9 @@ export default function GoogleAnalytics() {
       <Script id="gtag-init" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];
-          function gtag(){ dataLayer.push(arguments); }
-          window.gtag = gtag;
+          function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-ZPWMPNQBG7', {
-            page_path: window.location.pathname,
-          });
+          gtag('config', 'G-ZPWMPNQBG7');
         `}
       </Script>
     </>

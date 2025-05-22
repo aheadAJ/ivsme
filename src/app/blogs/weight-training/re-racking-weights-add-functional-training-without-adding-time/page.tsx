@@ -6,24 +6,23 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Re-Rack Weights: Add Functional Training Without Adding Time | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Learn how to incorporate functional training into your weightlifting routine seamlessly, using the simple act of re-racking weights.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    're-rack weights',
+    'functional training',
+    'burn calories',
+    'lose weight',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'Re-Rack Weights: Add Functional Training Without Adding Time',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      "Re-racking weights is a simple habit with big benefits. You're not just making everyone happy but you're also adding functional training to your workout and burning extra calories without spending any extra time in the gym.",
+    url: 'https://www.ivsme.in/blogs/weight-training/re-racking-weights-add-functional-training-without-adding-time',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/woman-dumbbells-1200x630.jpg',
         width: 1200,
         height: 630,
         alt: 'i Vs. Me Logo',
@@ -31,7 +30,8 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/weight-training/re-racking-weights-add-functional-training-without-adding-time',
   },
 };
 
@@ -45,12 +45,12 @@ export default function ReRackingWeightsBlog() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/weight-training/re-racking-weights-add-functional-training-without-adding-time',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Re-Rack Weights | Add Functional Training Without Adding Time',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Re-racking weights is a simple habit with big benefits. You are not just making everyone happy but you are also adding functional training to your workout and burning extra calories without spending any extra time in the gym.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
