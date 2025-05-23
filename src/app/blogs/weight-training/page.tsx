@@ -39,6 +39,7 @@ interface BlogMeta {
   category: string;
   image: string;
   slug: string;
+  date: string;
 }
 
 async function getWeightTrainingBlogs(): Promise<BlogMeta[]> {
@@ -60,6 +61,7 @@ async function getWeightTrainingBlogs(): Promise<BlogMeta[]> {
         category,
         image: meta.image,
         slug: blog,
+        date: meta.date,
       });
     }
   }
@@ -109,41 +111,45 @@ export default async function WeightTrainingPage() {
         </div>
 
         <section className="blogs--section ptb-5 flex-row">
-          {blogs.map((blog) => (
-            <div
-              className="first-section--blogs pb-2 flex-container-3"
-              key={blog.slug}
-            >
-              <div className="first-section--wrapper">
-                <div className="section--container">
-                  <Link href={`/blogs/${blog.category}/${blog.slug}`}>
-                    <div className="img--wrapper">
-                      <Image
-                        src={blog.image}
-                        alt={blog.title}
-                        width={587}
-                        height={330}
-                        loading="lazy"
-                      />
-                    </div>
-                  </Link>
-                  <h2 className="blogs--category--h2">{blog.title}</h2>
-                  <p>
-                    {blog.description}{' '}
-                    <Link
-                      className="para--cta"
-                      href={`/blogs/${blog.category}/${blog.slug}`}
-                    >
-                      Read More
+          {[...blogs]
+            .sort(
+              (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+            )
+            .map((blog) => (
+              <div
+                className="first-section--blogs pb-2 flex-container-3"
+                key={blog.slug}
+              >
+                <div className="first-section--wrapper">
+                  <div className="section--container">
+                    <Link href={`/blogs/${blog.category}/${blog.slug}`}>
+                      <div className="img--wrapper">
+                        <Image
+                          src={blog.image}
+                          alt={blog.title}
+                          width={587}
+                          height={330}
+                          loading="lazy"
+                        />
+                      </div>
                     </Link>
-                  </p>
-                  <Link className="categories--btn" href="/blogs">
-                    All Blog Categories
-                  </Link>
+                    <h2 className="blogs--category--h2">{blog.title}</h2>
+                    <p>
+                      {blog.description}{' '}
+                      <Link
+                        className="para--cta"
+                        href={`/blogs/${blog.category}/${blog.slug}`}
+                      >
+                        Read More
+                      </Link>
+                    </p>
+                    <Link className="categories--btn" href="/blogs">
+                      All Blog Categories
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
         </section>
       </main>
     </>
