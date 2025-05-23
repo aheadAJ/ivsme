@@ -6,32 +6,39 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Metabolism: The Hidden Factor That Can Make or Break Your Fat Loss Goals | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Struggling with fat loss? Discover how diet cycling, weight training strategies, and optimizing sleep, recovery, and stress can help overcome metabolic slowdowns and keep you on track to achieve your fitness goals.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'metabolism and fat loss',
+    'diet cycling tips',
+    'weight training cycling',
+    'metabolic slowdown solutions',
+    'optimize recovery for weight loss',
+    'sleep and fat loss connection',
+    'stress management for metabolism',
+    'boost metabolism naturally',
+    'functional training for fat loss',
+    'achieve fitness goals',
   ],
   openGraph: {
     title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+      'Unlock Your Fat Loss Goals: Mastering Metabolism with Diet & Training Cycles',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Struggling with fat loss? Discover how diet cycling, weight training strategies, and optimizing sleep, recovery, and stress can help overcome metabolic slowdowns and keep you on track to achieve your fitness goals.',
+    url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/metabolism-the-hidden-factor-that-can-make-or-break-your-fat-loss-goals',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/man-barbell-sun-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Metabolism The Hidden Factor Blog Meta Image',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/fitness-and-fat-loss/metabolism-the-hidden-factor-that-can-make-or-break-your-fat-loss-goals',
   },
 };
 
@@ -45,18 +52,18 @@ export default function MetabolismBlog() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/metabolism-the-hidden-factor-that-can-make-or-break-your-fat-loss-goals',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Metabolism: The Hidden Factor That Can Make or Break Your Fat Loss Goals',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Weight loss is not just about cutting calories or exercising harder. This article explores how diet cycling and weight training cycling combat metabolic slowdowns, along with tips on recovery, sleep, and stress management for sustainable fat loss.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

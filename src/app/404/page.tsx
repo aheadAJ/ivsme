@@ -3,10 +3,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export const metadata = {
-  title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+  title: 'i Vs. Me | Page Not Found | Error 404',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Looks like this lift is a 404. But your workout is still on track! Click below to keep your workout going strong.',
   keywords: [
     'fitness inspiration',
     'health transformation',
@@ -14,11 +13,10 @@ export const metadata = {
     'inspiring fitness stories',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'i Vs. Me | Page Not Found | Error 404',
     description:
       "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+    url: 'https://www.ivsme.in/404',
     images: [
       {
         url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
@@ -29,7 +27,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical: 'https://www.ivsme.in/404',
   },
 };
 
@@ -43,12 +41,11 @@ export default function Error404Page() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/404',
               name: 'i Vs. Me',
-              headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+              headline: 'i Vs. Me | Page Not Found | Error 404',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Looks like this lift is a 404. But your workout is still on track! Click below to keep your workout going strong.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',

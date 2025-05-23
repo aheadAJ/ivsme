@@ -6,32 +6,37 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Book Review | Squat Every Day - Learning Lessons of Life by Anand Jha | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    "ChatGPT reviews Squat Every Day: Learning Life's Lessons by Anand Jha, exploring its powerful lessons on persistence, weight training, and personal growth.",
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'book review',
+    'Squat Every Day Learning Lessons of Life',
+    'weight training',
+    'fitness',
+    'personal growth',
+    'mental strength',
+    'consistency',
+    'Anand Jha',
   ],
   openGraph: {
     title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+      'Book Review | Squat Every Day - Learning Lifes Lessons by Anand Jha | i Vs. Me',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      "ChatGPT reviews Squat Every Day: Learning Life's Lessons by Anand Jha, exploring its powerful lessons on persistence, weight training, and personal growth.",
+    url: 'https://www.ivsme.in/blogs/book-reviews/squat-every-day-learning-lifes-lessons',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/squat-every-day-anand-jha-cover-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Squat Every Day - Learning Lifes Lessons by Anand Jha Blog Meta Image',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/book-reviews/squat-every-day-learning-lifes-lessons',
   },
 };
 
@@ -45,18 +50,18 @@ export default function SquatEveryDayBookPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/book-reviews/squat-every-day-learning-lifes-lessons',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Book Review: Squat Every Day: Learning Lessons of Life by Anand Jha',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'ChatGPT reviews Squat Every Day: Learning Lessons of Life by Anand Jha, exploring its powerful lessons on persistence, weight training, and personal growth.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

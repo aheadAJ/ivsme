@@ -4,21 +4,29 @@ import Head from 'next/head';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'i Vs. Me About Us: Transformational Fitness Stories, Weight Training sTips, and Aging Healthy',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'From inspiring transformations to the latest in weight training and fitness trends, our magazine covers everything you need to fuel your journey to a healthier, stronger you.',
   keywords: [
     'fitness inspiration',
     'health transformation',
     'wellness journey',
     'inspiring fitness stories',
+    'Fitness Transformation',
+    'Weight Training Tips',
+    'Strength Training',
+    'Healthy Lifestyle',
+    'Fitness Inspiration',
+    'Transformational Stories',
+    'Fitness Motivation',
+    'Active Aging',
   ],
   openGraph: {
     title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+      'i Vs. Me About Us: Transformational Fitness Stories, Weight Training Tips, and Aging Healthy',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'From inspiring transformations to the latest in weight training and fitness trends, our magazine covers everything you need to fuel your journey to a healthier, stronger you.',
+    url: 'https://www.ivsme.in/about-us',
     images: [
       {
         url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
@@ -29,7 +37,7 @@ export const metadata = {
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical: 'https://www.ivsme.in/about-us',
   },
 };
 
@@ -43,18 +51,18 @@ export default function AboutUsPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
-              name: 'i Vs. Me',
+              url: 'https://www.ivsme.in/about-us',
+              name: 'i Vs. Me About Us Page',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'i Vs. Me About Us: Transformational Fitness Stories, Weight Training Tips, and Aging Healthy',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'From inspiring transformations to the latest in weight training and fitness trends, our magazine covers everything you need to fuel your journey to a healthier, stronger you.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

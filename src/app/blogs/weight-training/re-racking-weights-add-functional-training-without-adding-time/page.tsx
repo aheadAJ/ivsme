@@ -25,7 +25,7 @@ export const metadata = {
         url: 'https://www.ivsme.in/assets/icons/woman-dumbbells-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Rerack Weights Blog Meta Photo',
       },
     ],
   },
@@ -56,7 +56,7 @@ export default function ReRackingWeightsBlog() {
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

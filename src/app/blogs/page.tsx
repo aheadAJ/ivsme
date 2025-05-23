@@ -5,10 +5,9 @@ import Link from 'next/link';
 import Head from 'next/head';
 
 export const metadata = {
-  title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+  title: 'i Vs. Me Blogs: Fitness Tips, Transformation Stories & Motivation',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Explore i Vs. Me blogs for the latest in fitness tips, wellness advice, and inspiring personal growth stories to support your health journey.',
   keywords: [
     'fitness inspiration',
     'health transformation',
@@ -16,17 +15,16 @@ export const metadata = {
     'inspiring fitness stories',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'i Vs. Me Blogs: Fitness Tips, Transformation Stories & Motivation',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Explore i Vs. Me blogs for the latest in fitness tips, wellness advice, and inspiring personal growth stories to support your health journey.',
+    url: 'https://www.ivsme.in/blogs',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/sleep-eat-train-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'i Vs. Me Blogs Meta Image',
       },
     ],
   },
@@ -89,18 +87,18 @@ export default async function BlogsPage() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'i Vs. Me Blogs: Fitness Tips, Transformation Stories & Motivation',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Explore i Vs. Me blogs for the latest in fitness tips, wellness advice, and inspiring personal growth stories to support your health journey.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

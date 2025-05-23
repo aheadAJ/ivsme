@@ -23,10 +23,10 @@ export const metadata = {
     url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/aj-back-chin-up-bw-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Fitness & Fat Loss Blog Category Meta Image',
       },
     ],
   },
@@ -90,7 +90,7 @@ export default async function FitnessBlogsPage() {
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
             }),

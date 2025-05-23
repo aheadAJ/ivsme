@@ -21,10 +21,10 @@ export const metadata = {
     url: 'https://www.ivsme.in/blogs/book-reviews',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/aj-gym-winking-triceps-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'i Vs. Me Book Reviews Category Meta Image',
       },
     ],
   },
@@ -88,7 +88,7 @@ export default async function BookReviewsPage() {
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/vavicon.icos',
                 },
               },
             }),

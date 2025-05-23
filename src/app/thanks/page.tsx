@@ -1,30 +1,73 @@
-'use client';
+// 'use client';
 
-import { useEffect } from 'react';
-import Head from 'next/head';
+// import { useEffect } from 'react';
 import Link from 'next/link';
+import Head from 'next/head';
+
+export const metadata = {
+  title:
+    'i Vs. Me | Thank You | Read Transformational Fitness Stories, Weight Training Tips, and Aging Healthy',
+  description:
+    'We’ll be in touch soon. Stay strong, stay inspired! Meanwhile, please click on the link to continue browsing our website.',
+  keywords: [
+    'fitness inspiration',
+    'health transformation',
+    'wellness journey',
+    'inspiring fitness stories',
+  ],
+  openGraph: {
+    title:
+      'i Vs. Me | Thank You | Read Transformational Fitness Stories, Weight Training Tips, and Aging Healthy',
+    description:
+      'We’ll be in touch soon. Stay strong, stay inspired! Meanwhile, please click on the link to continue browsing our website.',
+    url: 'https://www.ivsme.in/thanks',
+    images: [
+      {
+        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'i Vs. Me Logo',
+      },
+    ],
+  },
+  alternates: {
+    canonical: 'https://www.ivsme.in/thanks',
+  },
+};
 
 export default function ThanksPage() {
-  useEffect(() => {}, []);
+  // useEffect(() => {}, []);
 
   return (
     <>
       <Head>
-        <title>Thank You – i Vs. Me</title>
-        <meta
-          name="description"
-          content="Thank you for reaching out to i Vs. Me. Your fitness story submission has been received."
-        />
-        <link rel="canonical" href="https://www.ivsme.in/thanks" />
-        <meta property="og:title" content="Thank You – i Vs. Me" />
-        <meta
-          property="og:description"
-          content="Thank you for reaching out to i Vs. Me. Your fitness story submission has been received."
-        />
-        <meta property="og:url" content="https://www.ivsme.in/thanks" />
-        <meta
-          property="og:image"
-          content="https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg"
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              url: 'https://www.ivsme.in/thanks',
+              name: 'i Vs. Me',
+              headline:
+                'i Vs. Me | Thank You | Read Transformational Fitness Stories, Weight Training Tips, and Aging Healthy',
+              description:
+                'We’ll be in touch soon. Stay strong, stay inspired! Meanwhile, please click on the link to continue browsing our website.',
+              publisher: {
+                '@type': 'Organization',
+                name: 'i Vs. Me',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://www.ivsme.in/favicon.ico',
+                },
+              },
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://www.ivsme.in/search?q={search_term}',
+                'query-input': 'required name=search_term',
+              },
+            }),
+          }}
         />
       </Head>
       <main>

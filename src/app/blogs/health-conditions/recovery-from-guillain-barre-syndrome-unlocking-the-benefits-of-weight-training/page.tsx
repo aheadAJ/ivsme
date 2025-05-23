@@ -6,32 +6,35 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Recovery from Guillain-Barr&eacute; Syndrome - Unlocking the Benefits of Weight Training | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Find out how weight training can accelerate recovery from Guillain-Barre Syndrome. Explore strategies to improve stability, mobility, and endurance, helping you rebuild strength and regain confidence.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'Weight training for Guillain-Barre recovery',
+    'Strength exercises for GBS patients',
+    'Physical therapy for Guillain-Barre Syndrome',
+    'Rebuilding strength after GBS',
+    'GBS recovery exercises and tips',
   ],
+
   openGraph: {
     title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+      'Recovery from Guillain-Barre Syndrome - Unlocking the Benefits of Weight Training',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Find out how weight training can accelerate recovery from Guillain-Barre Syndrome. Explore strategies to improve stability, mobility, and endurance, helping you rebuild strength and regain confidence.',
+    url: 'https://www.ivsme.in/blogs/health-conditions/recovery-from-guillain-barre-syndrome-unlocking-the-benefits-of-weight-training',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/man-dumbbell-curl-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'GBS Recovery Blog Meta Photo',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/health-conditions/recovery-from-guillain-barre-syndrome-unlocking-the-benefits-of-weight-training',
   },
 };
 
@@ -45,18 +48,18 @@ export default function GuillainBarréSyndromeRecoveryBlog() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/health-conditions/recovery-from-guillain-barre-syndrome-unlocking-the-benefits-of-weight-training',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Recovery from Guillain-Barré Syndrome: Unlocking the Benefits of Weight Training',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Incorporating weight training into your recovery from Guillain-Barré Syndrome is a powerful strategy with profound benefits. You are not only rebuilding strength and mobility but also enhancing your overall well-being and confidence, all while making significant strides in your rehabilitation journey.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

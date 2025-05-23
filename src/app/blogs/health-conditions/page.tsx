@@ -8,12 +8,7 @@ export const metadata = {
   title: 'Health Conditions Blogs - i Vs. Me | Wellness, Recovery & Prevention',
   description:
     'Understand and manage health conditions better with insights, expert advice, and recovery stories from i Vs. Me.',
-  keywords: [
-    'health conditions',
-    'wellness tips',
-    'disease prevention',
-    'chronic illness management',
-  ],
+  keywords: ['health conditions', 'weight training for GBS'],
   openGraph: {
     title:
       'Health Conditions Blogs - i Vs. Me | Wellness, Recovery & Prevention',
@@ -22,10 +17,10 @@ export const metadata = {
     url: 'https://www.ivsme.in/blogs/health-conditions',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/man-dumbbell-curl-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Health Conditions Category Meta Image',
       },
     ],
   },
@@ -89,7 +84,7 @@ export default async function HealthConditionsPage() {
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
             }),

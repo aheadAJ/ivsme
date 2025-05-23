@@ -5,33 +5,43 @@ import BookSEDBlogBottom from '@/app/components/BookSEDBlogBottom';
 import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
-  title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+  title: 'Sleep Eat Lift: The Ultimate Science-Backed Guide to Muscle Growth',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Maximize muscle growth with the proven triad of weight training, quality sleep, and balanced nutrition. Learn how to optimize recovery, repair, and results in this science-backed guide.',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'muscle growth',
+    'build muscle',
+    'weight training',
+    'muscle recovery',
+    'balanced nutrition',
+    'quality sleep',
+    'fitness tips',
+    'training recovery',
+    'protein for muscle repair',
+    'workout nutrition',
+    'bodybuilding tips',
+    'muscle-building formula',
+    'strength training',
+    'muscle repair diet',
+    'recovery for gains',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'The Muscle Growth Triad: Sleep, Eat, and Lift Your Way to Gains',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Discover the science behind building muscle with the perfect balance of training, recovery, and nutrition. From quality sleep to high-protein meals, unlock the formula for optimal results.',
+    url: 'https://www.ivsme.in/blogs/weight-training/sleep-eat-lift-the-science-backed-formula-for-muscle-growth',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/sleep-eat-train-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Sleep Eat Lift Blog Meta Image',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/weight-training/sleep-eat-lift-the-science-backed-formula-for-muscle-growth',
   },
 };
 
@@ -45,18 +55,18 @@ export default function EatSleepLiftBlog() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/weight-training/sleep-eat-lift-the-science-backed-formula-for-muscle-growth',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Sleep Eat Lift: The Science-Backed Formula for Muscle Growth',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Building muscle is not just about pumping iron—it is also about working smarter, not just harder. When you combine effective training with quality sleep and the right nutrition, you unlock the secret to faster gains, better recovery, and long-lasting results. It is time to master the ultimate muscle-building formula and crush your fitness goals like never before!',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

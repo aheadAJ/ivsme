@@ -6,32 +6,38 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'Courtesy to Calories: How Re-racking Weights Boosts Your Fitness | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'What if I told you that re-racking weights could boost strength, stability, and calorie burn—all without extra gym time? Learn how to make the most of your workout today!',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    're-racking weights',
+    'functional fitness',
+    'gym etiquette',
+    'core activation',
+    'strength training',
+    'grip strength',
+    'stability',
+    'burn calories',
+    'fitness hacks',
+    'workout tips',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'Courtesy to Calories: How Re-racking Weights Boosts Your Fitness',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Discover how the simple act of re-racking weights in the gym can enhance your fitness routine. Boost strength, core stability, and burn extra calories—all without extra gym time!',
+    url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/courtesy-to-calories-how-reracking-weights-boosts-your-fitness',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/dumbbell-hand-picking-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Courtesy to Calories Blog Meta Image',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/fitness-and-fat-loss/courtesy-to-calories-how-reracking-weights-boosts-your-fitness',
   },
 };
 
@@ -45,18 +51,18 @@ export default function ReRackingWeightBlog() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/courtesy-to-calories-how-reracking-weights-boosts-your-fitness',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'Courtesy to Calories: How Re-racking Weights Boosts Your Fitness',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'When you think of functional fitness, re-racking weights might not be the first activity that comes to mind. But what if I told you that it could boost strength, stability, and calorie burn—all without extra gym time? Read the blog to make the most of your workout today!',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

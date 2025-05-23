@@ -6,32 +6,36 @@ import BlogBottomCategories from '@/app/components/BlogBottomCategories';
 
 export const metadata = {
   title:
-    'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    'New Year New Fitness Resolution: Kickstarting Your 2025 Goals | i Vs. Me',
   description:
-    "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
+    'Kickstart your fitness journey in 2025! Build lasting habits, stay consistent, and turn fitness into a sustainable lifestyle. This year make progress that lasts!',
   keywords: [
-    'fitness inspiration',
-    'health transformation',
-    'wellness journey',
-    'inspiring fitness stories',
+    'strength training',
+    'fitness journey',
+    'sustainable habits',
+    'consistency',
+    'lasting lifestyle',
+    '2025 fitness goals',
+    'fitness transformation',
+    'health and wellness',
   ],
   openGraph: {
-    title:
-      'i Vs. Me: Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+    title: 'New Year New Fitness Resolution: Kickstarting Your 2025 Goals',
     description:
-      "Transform your life with 'i Vs. Me.' Discover fitness tips and inspiring transformation stories to fuel your journey to a stronger, healthier you.",
-    url: 'https://www.ivsme.in',
+      'Kickstart your fitness journey in 2025! Build lasting habits, stay consistent, and turn fitness into a sustainable lifestyle. This year make progress that lasts!',
+    url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/new-year-new-fitness-resolution-kickstarting-your-2025-goals',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/man-barbell-sun-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'New Year Fitness Resolution Blog Meta Image',
       },
     ],
   },
   alternates: {
-    canonical: 'https://www.ivsme.in',
+    canonical:
+      'https://www.ivsme.in/blogs/fitness-and-fat-loss/new-year-new-fitness-resolution-kickstarting-your-2025-goals',
   },
 };
 
@@ -45,18 +49,18 @@ export default function NewYear2025FitnessGoals() {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'WebSite',
-              url: 'https://www.ivsme.in/',
+              url: 'https://www.ivsme.in/blogs/fitness-and-fat-loss/new-year-new-fitness-resolution-kickstarting-your-2025-goals',
               name: 'i Vs. Me',
               headline:
-                'i Vs. Me - Challenge Your Limits 🏋️ Transform Your Life | The Ultimate Fitness Magazine',
+                'New Year - New Fitness Resolution: Kickstarting Your 2025 Goals',
               description:
-                'i Vs. Me focuses on blogs and resources about health, fitness, and wellness.',
+                'Start your 2025 fitness journey with purpose and determination. This year is about more than just resolutions—it is about building a sustainable lifestyle. By focusing on consistency, adopting beginner-friendly routines, and celebrating small victories, you can transform fitness from a daunting challenge into a rewarding habit.',
               publisher: {
                 '@type': 'Organization',
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
               potentialAction: {

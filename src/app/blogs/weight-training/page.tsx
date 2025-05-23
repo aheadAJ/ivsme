@@ -21,10 +21,10 @@ export const metadata = {
     url: 'https://www.ivsme.in/blogs/weight-training',
     images: [
       {
-        url: 'https://www.ivsme.in/assets/icons/ivsme-logo-1200x630.jpg',
+        url: 'https://www.ivsme.in/assets/icons/man-barbell-sun-1200x630.jpg',
         width: 1200,
         height: 630,
-        alt: 'i Vs. Me Logo',
+        alt: 'Weight Training Category Meta Image',
       },
     ],
   },
@@ -88,7 +88,7 @@ export default async function WeightTrainingPage() {
                 name: 'i Vs. Me',
                 logo: {
                   '@type': 'ImageObject',
-                  url: 'https://www.ivsme.in/icons/icon-ivsme.jpg',
+                  url: 'https://www.ivsme.in/favicon.ico',
                 },
               },
             }),
